@@ -46,8 +46,6 @@ export default {
 
 <style scoped>
 
-  .agileTeamsContainer{
-      background-color: black;
-  }
+ 
 
 </style>
