@@ -10,12 +10,12 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "g": "^2.0.1",
-    "nuxt": "^2.14.5",
-    "vercel": "^20.1.2"
+    "nuxt": "^2.14.5"
   },
   "devDependencies": {
     "@nuxtjs/vercel-builder": "^0.17.12",
-    "@nuxtjs/vuetify": "^1.11.2"
+    "@nuxtjs/vuetify": "^1.11.2",
+    "g": "^2.0.1",
+    "vercel": "^20.1.2"
   }
 }
