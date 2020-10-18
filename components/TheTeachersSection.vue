@@ -16,7 +16,7 @@
           class="d-flex justify-center"
         >
             <v-col
-              cols="10" sm="12" md="10" lg="10"
+              cols="10" sm="12" md="7" lg="7"
               class=""
             >
                 <p class="profesionalesTexto">Profesionales de Verkel</p>
@@ -29,27 +29,20 @@
                         <br />Ademas de Llevar al capacitado por un camino practico.
                     </p>
                 </div>
-            </v-col>
-            <v-col
-              class="d-flex justify-start ml-16 pl-3"
-              cols="12" sm="10" md="5" lg="5"
-            >
-                <v-btn
+                 <v-btn
                   rounded
                   outlined
-                  large
-                  class="ir-profesionales"
+                  class="ir-profesionales ml-10"
                   color="#5e949f"
                 >
                     Aprende mas sobre los Profesionales de Verkel
                 </v-btn>
             </v-col>
             <v-col
-              lg="5" md="5"
+              class="d-flex justify-start ml-16 pl-3"
+              cols="12" sm="10" md="5" lg="5"
             >
-                <div>
-
-                </div>
+               <v-img src="ImagenProfesionales.png"></v-img>
             </v-col>
         </v-row>
         <v-row>

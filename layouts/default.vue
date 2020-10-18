@@ -19,11 +19,16 @@
       </v-main>
     
       <v-footer 
+        id="TheFooter"
         class="mt-16"
         color="rgba(119, 119, 119, 0.1)"
       >
         <TheFooterContent></TheFooterContent>
       </v-footer>
+
+      <v-bottom-navigation id="TheBottomNav">
+        <TheBottomNavigationContent></TheBottomNavigationContent>
+      </v-bottom-navigation>
     
     </div>
   </v-app>
@@ -32,6 +37,7 @@
 <script>
 import TheNavbarContent from '@/components/TheNavbarContent';
 import TheFooterContent from '@/components/TheFooterContent'
+import TheBottomNavigationContent from '@/components/TheBottomNavigationContent';
 
 export default {
   data () {
@@ -42,6 +48,7 @@ export default {
   components: {
     TheNavbarContent,
     TheFooterContent,
+    TheBottomNavigationContent,
   }
 }
 </script>
@@ -51,7 +58,19 @@ export default {
   border: black solid;
 }
 
+#TheFooter {
+  box-shadow: 0px -2px 0px #989696;
+}
+
+.v-footer.footerClass{
+    box-shadow:  0px -2px 0px #989696;
+}
+
 .theme--light.v-application{
   background-image: linear-gradient(to left, var(--v-firstbackground-base), var(--v-secondbackground-base)) !important;;
+}
+
+.v-bottom-navigation #TheBottomNav{
+  opacity: 0.1;
 }
 </style>

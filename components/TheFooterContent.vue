@@ -1,6 +1,5 @@
 <template>
-
-        <v-container fluid class="mt-16">
+        <v-container fluid class="footerContainer">
             <v-row>
                 <v-col cols="12" md="3" sm="3" lg="4">
                     <div class="borders iconsBorders d-flex justify-center align center">
@@ -60,24 +59,18 @@ export default {
 
 <style scoped>
 
+
 .borders{ 
     width: 520px;
     height: 150px;
 }
 
-.iconsBorders{
-    border-bottom: ridge 0.25px black;
-    border-right: ridge 0.25px black;
-}
-
 .informationBorders{
-    border-top: ridge 0.25px black;
-    border-left: ridge 0.25px black;
-}
-
-.descriptionBorders{
-    border-bottom: ridge 0.25px black;
     border-right: ridge 0.25px black;
 }
+
+
+
+
 
 </style>

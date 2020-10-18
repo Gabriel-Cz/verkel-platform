@@ -1,9 +1,9 @@
 <template>
     <v-container fluid class="mt-16 mainContainerCoursesSection">
-        <v-row class="mt-16">
+        <v-row class="mt-16 d-flex justify-center">
             <v-col
               class="pr-16 pl-6" 
-              cols="12" sm="10" md="6" lg="6"
+              cols="12" sm="10" md="6" lg="5"
             >
                 <v-row>
                   <v-col 
@@ -21,8 +21,7 @@
                   >
                       <v-card
                         link
-                        elevation="10"
-                        class="cardWrapper-cursos"
+                        id="cardWrapper-cursos"
                       >
                         <v-img
                           class="cursosDestacadosImagen d-flex"
@@ -42,7 +41,7 @@
             </v-col>
             <v-col 
               class="pl-16 pr-6" 
-              cols="12" sm="10" md="6" lg="6"
+              cols="12" sm="10" md="6" lg="5"
             >
                 <v-row>
                   <v-col 
@@ -59,8 +58,7 @@
                   >
                       <v-card
                         link
-                        elevation="10"
-                        class="cardWrapper-articulos"
+                        id="cardWrapper-articulos"
                       >
                         <v-img
                           height="120"
@@ -76,9 +74,8 @@
                   </v-col>
                 </v-row>
             </v-col>
-            <v-col cols="3"></v-col>
             <v-col 
-              cols="12" sm="6" md="6" lg="6"
+              cols="12" sm="6" md="6" lg="5"
               class="pr-8 pl-8"
             >
               <v-row>
@@ -96,8 +93,7 @@
                 >
                     <v-card
                       link
-                      elevation="10"
-                      class="cardWrapper-categorias"
+                      id="cardWrapper-categorias"
                     >
                       <v-img
                         height="120"
@@ -113,7 +109,6 @@
                       </v-img>
                     </v-card>
                 </v-col>
-                <v-col cols="3"></v-col>
               </v-row>
             </v-col>
         </v-row>
@@ -217,13 +212,28 @@ export default {
     background-image: url('/Component12.svg');
   }
   
-  .cardWrapper-cursos, .cardWrapper-articulos, .cardWrapper-categorias{
+  .v-card, #cardWrapper-cursos{
     border-radius: 25px;
+box-shadow: 6px 6px 4px #6868687c;
+border: whitesmoke 1px solid;
+border-top: none;
+border-left: none;
+  }
 
+  .v-card, #cardWrapper-articulos{
+    border-radius: 25px;
+box-shadow: 6px 6px 4px #6868687c;
+  }
+
+  .v-card, #cardWrapper-categorias{
+    border-radius: 25px;
+box-shadow: 6px 6px 4px #6868687c;
   }
 
   .cursosDestacadosImagen, .articulosDestacadosImagen, .categoriasDestacadasImagen{
     border-radius: 25px;
+    border-image: 25px;
+    -webkit-border-image: 25px;
   }
 
   
@@ -250,7 +260,6 @@ export default {
     font-family: 'Roboto', sans-serif;
   }
 
-  
   /*.rootContainer{
   }
   .borders{
