@@ -25,7 +25,7 @@
                       >
                         <v-img
                           class="cursosDestacadosImagen d-flex"
-                          height="120"
+                          height="100"
                           :lazy-src="cursoDestacado.image"
                           :src="cursoDestacado.image"
                         >
@@ -61,7 +61,7 @@
                         id="cardWrapper-articulos"
                       >
                         <v-img
-                          height="120"
+                          height="100"
                           :lazy-src="articuloDestacado.image"
                           :src="articuloDestacado.image"
                           class="articulosDestacadosImagen"
@@ -96,7 +96,7 @@
                       id="cardWrapper-categorias"
                     >
                       <v-img
-                        height="120"
+                        height="100"
                         :lazy-src="categoria.image"
                         :src="categoria.image"
                         class="categoriasDestacadasImagen"
@@ -144,6 +144,7 @@ export default {
                         description: "Lorem Ipsum la dasd difuse and lazer ipstrusm",
                         image: "MiniaturaNorma035.jpg",
                         padding: "pa-8 pt-0 pb-0 mt-16",
+                        link: "../cursos/norma035",
                       },
             ],
             articulosDestacado: [
@@ -213,27 +214,27 @@ export default {
   }
   
   .v-card, #cardWrapper-cursos{
-    border-radius: 25px;
-box-shadow: 6px 6px 4px #6868687c;
-border: whitesmoke 1px solid;
-border-top: none;
-border-left: none;
+    border-radius: 20px;
+    box-shadow: 6px 6px 4px #6868687c;
+    border: whitesmoke 1px solid;
+    border-top: none;
+    border-left: none;
   }
 
   .v-card, #cardWrapper-articulos{
-    border-radius: 25px;
+    border-radius: 20px;
 box-shadow: 6px 6px 4px #6868687c;
   }
 
   .v-card, #cardWrapper-categorias{
-    border-radius: 25px;
+    border-radius: 20px;
 box-shadow: 6px 6px 4px #6868687c;
   }
 
   .cursosDestacadosImagen, .articulosDestacadosImagen, .categoriasDestacadasImagen{
-    border-radius: 25px;
-    border-image: 25px;
-    -webkit-border-image: 25px;
+    border-radius: 20px;
+    border-image: 20px;
+    -webkit-border-image: 20px;
   }
 
   
@@ -259,10 +260,4 @@ box-shadow: 6px 6px 4px #6868687c;
     color: rgb(255, 255, 255);
     font-family: 'Roboto', sans-serif;
   }
-
-  /*.rootContainer{
-  }
-  .borders{
-      border: solid black;
-  }*/
 </style>

@@ -1,0 +1,23 @@
+<svg width="1950" height="400" viewBox="0 0 1950 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="0.5" width="1949" height="399" fill="url(#paint0_linear)" fill-opacity="0.5" stroke="#BDBDBD"/>
+<path d="M1594.78 142.265L1655.79 304.893L1718.85 142.265" stroke="black" stroke-width="8"/>
+<path d="M1581.67 146.372L1642.69 309L1705.75 146.372" stroke="black" stroke-width="4"/>
+<ellipse cx="1649.44" cy="314.955" rx="4.70916" ry="4.72279" fill="black"/>
+<path d="M1760.03 217.83C1760.03 277.385 1711.89 325.659 1652.52 325.659C1593.14 325.659 1545 277.385 1545 217.83C1545 158.274 1593.14 110 1652.52 110C1711.89 110 1760.03 158.274 1760.03 217.83Z" stroke="black" stroke-width="2"/>
+<path d="M1768.22 217.83C1768.22 281.921 1716.41 333.873 1652.52 333.873C1588.62 333.873 1536.81 281.921 1536.81 217.83C1536.81 153.738 1588.62 101.786 1652.52 101.786C1716.41 101.786 1768.22 153.738 1768.22 217.83Z" stroke="black" stroke-width="2"/>
+<path d="M1554.5 278L1349.5 308L1083 254L884 308" stroke="black"/>
+<path d="M1569.5 299.5C1567.1 299.1 1365.83 254.333 1265.5 232L1033 314.5L838 257" stroke="black"/>
+<circle cx="1082" cy="253" r="5" fill="black"/>
+<circle cx="1349" cy="308" r="5" fill="black"/>
+<circle cx="838" cy="256" r="5" fill="black"/>
+<circle cx="887" cy="307" r="5" fill="black"/>
+<rect width="1950" height="399" fill="white" fill-opacity="0.3"/>
+<defs>
+<linearGradient id="paint0_linear" x1="16.3797" y1="366.324" x2="1888.99" y2="367.958" gradientUnits="userSpaceOnUse">
+<stop stop-color="#808080"/>
+<stop offset="0.515625" stop-color="white" stop-opacity="0.447917"/>
+<stop offset="1" stop-color="#266BC8" stop-opacity="0.5"/>
+</linearGradient>
+</defs>
+</svg>
+ 

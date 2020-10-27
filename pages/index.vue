@@ -18,6 +18,22 @@ import TheEnterpriseSection from '@/components/TheEnterpriseSection'
 import TheEsloganSection from '@/components/TheEsloganSection';
 
 export default {
+  head () {
+    return {
+      title: "Plataforma Verkel | Principal",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "Plataforma de Capacitacion numero uno de Mexico",
+
+        }
+      ],
+      htmlAtrrs: {
+        lang: "es"
+      }
+    }
+  },
   layout: 'default',
   components: {
     FirstContent,

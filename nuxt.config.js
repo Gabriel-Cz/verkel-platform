@@ -3,12 +3,12 @@ import colors from 'vuetify/es5/util/colors'
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    titleTemplate: '%s - plataforma-verkel',
-    title: 'plataforma-verkel',
+    titleTemplate: '',
+    title: 'Verkel',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: 'Plataforma de Capacitacion numero uno de Mexico' }
     ],
     link: [
       { 
@@ -19,6 +19,10 @@ export default {
       { 
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Roboto&display=swap',
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300&display=swap',
       },
       {
         rel: 'stylesheet',

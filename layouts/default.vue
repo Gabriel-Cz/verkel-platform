@@ -3,7 +3,7 @@
     <div>
       <v-app-bar
         color="rgba(0,0,0,0.0)"
-        class="appBar"
+        id="TheAppBar"
         dense
         height="90"
       >
@@ -54,17 +54,15 @@ export default {
 </script>
 
 <style>
-.appBar{
-  border: black solid;
+#TheAppBar{
+  box-shadow: 0px 1px 0px #989696;
 }
 
 #TheFooter {
-  box-shadow: 0px -2px 0px #989696;
+  box-shadow: 0px -1px 0px #989696;
 }
 
-.v-footer.footerClass{
-    box-shadow:  0px -2px 0px #989696;
-}
+
 
 .theme--light.v-application{
   background-image: linear-gradient(to left, var(--v-firstbackground-base), var(--v-secondbackground-base)) !important;;
