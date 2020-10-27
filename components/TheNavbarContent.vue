@@ -26,7 +26,7 @@
                   text
                   tile
                 > 
-                  <nuxt-link :to="btn.name">
+                  <nuxt-link to="/cursos">
                     {{ btn.name }}
                   </nuxt-link>
                 </button>
@@ -64,7 +64,7 @@ export default {
             {
                 key:  'dos',
                 name: 'Cursos',
-                link: '../cursos'
+                linkAddress: '/cursos'
             },
             {
                 key: 'tres',
