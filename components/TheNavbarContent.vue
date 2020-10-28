@@ -26,9 +26,9 @@
                   text
                   tile
                 > 
-                  <nuxt-link to="/cursos">
+                  <NuxtLink to="/cursos">
                     {{ btn.name }}
-                  </nuxt-link>
+                  </NuxtLink>
                 </button>
                 
             </v-col>
@@ -64,7 +64,7 @@ export default {
             {
                 key:  'dos',
                 name: 'Cursos',
-                linkAddress: '/cursos'
+                link: '../cursos/index'
             },
             {
                 key: 'tres',

@@ -18,8 +18,10 @@
               <div class="mt-16 pt-16">
                <div class="divOverlayFromImage mt-16">
                     <p class="descripcionDelCurso pa-8 pt-5 pb-2">
-                        La norma consiste en ayudar a los trabajdores a mantener una salud mental buena y que no se chinguen hasta caer.
-                        La norma consiste en ayudar a los trabajdores a mantener una salud mental buena y que no se chinguen hasta caer.</p>
+                        Norma Descripcion Norma Descripcion Norma Descripcion Norma Descripcion Norma Descripcion Norma Descripcion
+                        Norma Descripcion Norma Descripcion Norma Descripcion Norma Descripcion Norma Descripcion Norma Descripcion
+                        Norma Descripcion Norma Descripcion.
+                    </p>
               </div>
               <v-img
                   class="imagenDelCurso pa-16 ma-16"

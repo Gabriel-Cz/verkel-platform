@@ -22,6 +22,7 @@
                       <v-card
                         link
                         id="cardWrapper-cursos"
+                        nuxt-link :to="cursoDestacado.link"
                       >
                         <v-img
                           class="cursosDestacadosImagen d-flex"
