@@ -11,7 +11,7 @@
     
       <v-main>
 
-        <v-container fluid>
+        <v-container fluid style="background-image: src(/TheCoursePageMainContainer.svg)">
           <nuxt />
         </v-container>
 
@@ -26,7 +26,7 @@
         <TheFooterContent></TheFooterContent>
       </v-footer>
 
-      <v-bottom-navigation style="background-color: rgba(0,0,0,0.2)" id="TheBottomNav">
+      <v-bottom-navigation id="TheBottomNav">
         <TheBottomNavigationContent></TheBottomNavigationContent>
       </v-bottom-navigation>
     </v-app>

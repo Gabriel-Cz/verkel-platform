@@ -8,9 +8,9 @@
 
 <script>
 
-import TheCoursesPageHeader from '@/components/TheCoursesPageHeader';
-import TheNavbarForCoursesPage from '@/components/TheNavbarForCoursesPage';
-import TheCoursesPageMainContainer from '@/components/TheCoursesPageMainContainer';
+import TheCoursesPageHeader from '@/components/CoursesPageComponents/TheCoursesPageHeader';
+import TheNavbarForCoursesPage from '@/components/CoursesPageComponents/TheNavbarForCoursesPage';
+import TheCoursesPageMainContainer from '@/components/CoursesPageComponents/TheCoursesPageMainContainer';
 
 export default {
     head () {
@@ -29,7 +29,6 @@ export default {
       }
     }
   },
-    layout: 'default',
     components: {
         TheCoursesPageHeader,
         TheNavbarForCoursesPage,

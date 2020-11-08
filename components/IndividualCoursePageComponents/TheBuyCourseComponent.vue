@@ -14,7 +14,7 @@
                 <span class="ribbon5 mt-10">Adquiere el curso de por vida por $***</span>
                     <v-img 
                       class="img"
-                      src="../MiniaturaNorma035.jpg"
+                      src="../cursos/norma035.jpg"
                       height="350"
                     >                       
                     </v-img>
@@ -115,32 +115,9 @@ export default {
     name: "TheBuyCourseComponent",
     data () {
       return {
-        habilidadesRequeridas: [
-          {
-            name: "Lorem Ipsum"
-          },
-          {
-            name: "Lorem Ipsum"
-          },
-          {
-            name: "Lorem Ipsum"
-          },
-          {
-            name: "Lorem Ipsum"
-          },
-          {
-            name: "Lorem Ipsum"
-          },
-          {
-            name: "Lorem Ipsum"
-          },
-          {
-            name: "Lorem Ipsum"
-          },
-          {
-            name: "Lorem Ipsum"
-          }
-        ]
+        curso: {
+          cursoNombre: ""
+        }
       }
     }
 }

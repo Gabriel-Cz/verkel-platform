@@ -22,11 +22,7 @@ export default {
       },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300&display=swap',
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Inter&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Raleway&display=swap',
       },
       {
         rel: 'stylesheet',
@@ -54,8 +50,58 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
+    '@nuxtjs/pwa',
+    '@nuxtjs/firebase',
   ],
 
+  firebase: {
+      config: {
+        apiKey: "AIzaSyCPm8gGQQDMQCpXjiEwVDSN2uevyEVAjr4",
+        authDomain: "plataforma-verkel.firebaseapp.com",
+        databaseURL: "https://plataforma-verkel.firebaseio.com",
+        projectId: "plataforma-verkel",
+        storageBucket: "plataforma-verkel.appspot.com",
+        messagingSenderId: "330786743360",
+        appId: "1:330786743360:web:f4a72a3f0158e356cbeba5",
+        measurementId: "G-W4T7WM4VDF"
+      },
+    // ...
+    services: {
+      auth: true,
+      firestore: true,
+      firestore: {
+        memoryOnly: false, // default
+        chunkName: process.env.NODE_ENV !== 'production' ? 'firebase-auth' : '[id]', // default
+        enablePersistence: true,
+        emulatorPort: 8080,
+        emulatorHost: 'localhost',
+        settings: { 
+          // Firestore Settings - currently only works in SPA mode
+        }
+      },
+      auth: {
+        ssr: true
+      }
+      // ...
+    }
+  },
+  pwa: {
+    // disable the modules you don't need
+    meta: false,
+    icon: false,
+    // if you omit a module key form configuration sensible defaults will be applied
+    // manifest: false,
+
+    workbox: {
+      importScripts: [
+        // ...
+        '/firebase-auth-sw.js'
+      ],
+      // by default the workbox module will not install the service worker in dev environment to avoid conflicts with HMR
+      // only set this true for testing and remember to always clear your browser cache in development
+      dev: false
+    }
+  },
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
@@ -81,6 +127,11 @@ export default {
           fourthbackground: "#EAEAEA",
           warning: '#F35D5D'
         },
+        breakpoint: {
+          thresholds: {
+            lg: 1320,
+          }
+        }
       }
     }
   },

@@ -21,7 +21,7 @@
             >
                 <p class="profesionalesTexto">Profesionales de Verkel</p>
                 <div>
-                    <p class="profesionalesDescripcion pa-10">
+                    <p class="profesionalesDescripcion pa-10 pl-4">
                         Capacitados mediante recursos pedagogicos otorgados por Verkel. Los Profesionales de Verkel 
                          brindan el conocimiento necesario 
                         <br/>
@@ -32,7 +32,7 @@
                  <v-btn
                   rounded
                   outlined
-                  class="ir-profesionales ml-10"
+                  class="ir-profesionales ml-4"
                   color="#5e949f"
                 >
                     Aprende mas sobre los Profesionales de Verkel
@@ -74,6 +74,7 @@ export default {
 .profesionalesTexto{
       font-size: 60px;
       color: #808080;
+      border-bottom: 2px solid #808080;
   }
 
 .profesionalesDescripcion{

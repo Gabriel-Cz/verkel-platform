@@ -1,6 +1,6 @@
 <template>
   <div>
-    <FirstContent></FirstContent>
+    <TheMainPageHeader2></TheMainPageHeader2>
     <TheCoursesSection></TheCoursesSection>
     <TheTeachersSection></TheTeachersSection>
     <TheToolViewSection></TheToolViewSection>
@@ -10,12 +10,12 @@
 </template>
 
 <script>
-import FirstContent from '@/components/FirstContent';
-import TheCoursesSection from '@/components/TheCoursesSection';
-import TheTeachersSection from '@/components/TheTeachersSection';
-import TheToolViewSection from '@/components/TheToolViewSection';
-import TheEnterpriseSection from '@/components/TheEnterpriseSection'
-import TheEsloganSection from '@/components/TheEsloganSection';
+import TheMainPageHeader2 from '@/components/MainPageComponents/TheMainPageHeader2';
+import TheCoursesSection from '@/components/MainPageComponents/TheCoursesSection';
+import TheTeachersSection from '@/components/MainPageComponents/TheTeachersSection';
+import TheToolViewSection from '@/components/MainPageComponents/TheToolViewSection';
+import TheEnterpriseSection from '@/components/MainPageComponents/TheEnterpriseSection'
+import TheEsloganSection from '@/components/MainPageComponents/TheEsloganSection';
 
 export default {
   head () {
@@ -36,7 +36,7 @@ export default {
   },
   layout: 'default',
   components: {
-    FirstContent,
+    TheMainPageHeader2,
     TheCoursesSection,
     TheTeachersSection,
     TheToolViewSection,

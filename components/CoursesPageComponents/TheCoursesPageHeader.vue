@@ -38,16 +38,16 @@ export default {
 <style scoped>
 
  .headerText{
-     font-size: 5rem;
-     font-weight: 200; 
-     font-family: 'Roboto';
+     font-size: 4.4rem;
+     font-weight: 300; 
+     font-family: 'Raleway';
      color: #818181;
  }
 
  .headerDescriptionText{
     color: #616060;
-    font-family: 'Roboto';
-    font-weight: 200;
+    font-family: 'Raleway';
+    font-weight: 400;
     font-size: 1.5rem;
  }
 
