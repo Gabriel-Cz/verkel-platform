@@ -26,8 +26,8 @@
                   text
                   tile
                 > 
-                  <nuxt-link prefetch :to="btn.pagina" style="text-decoration: none;">
-                  <v-icon class="pb-1" x-small>mdi-checkbox-blank-circle</v-icon>
+                  <nuxt-link :to="btn.pagina" style="text-decoration: none;">
+                    <v-icon class="pb-1" x-small>mdi-checkbox-blank-circle</v-icon>
                     {{ btn.name }}
                   </nuxt-link>
                 </v-btn>
@@ -50,8 +50,6 @@
                   text 
                   class="loginBtns ml-4" 
                   small
-                  v-bind="attrs"
-                  v-on="on"
                   @click="loginFormModalView(true)"
                 >
                     Iniciar Sesion

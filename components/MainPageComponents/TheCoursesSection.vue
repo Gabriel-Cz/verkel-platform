@@ -15,11 +15,7 @@
                     :key="cursoDestacado.name"
                   >  
                     <TheCourseCardModel 
-                    :class="cursoDestacado.padding"
-                    :imagenDelCurso="cursoDestacado.image" 
-                    :nombreDelCurso="cursoDestacado.titulo" 
-                    :capacitadorDelCurso="cursoDestacado.capacitador"
-                    :avatarDelCapacitador="cursoDestacado.fotoDelCapacitador"
+                      :idDelCurso = "cursoDestacado.idDelCurso" 
                     >
                     </TheCourseCardModel>
                   </v-col>
@@ -36,17 +32,13 @@
                 <v-card-text class="mt-16">
                 <v-row>
                   <v-col
-                    cols="12" sm="12" md="3" lg="3"
+                    cols="12" sm="12" md="4" lg="4"
                     class="justify-center"
                     v-for="articuloDestacado in articulosDestacados"
                     :key="articuloDestacado.name"
                   >
                       <ThePostCardModel
-                        :class="articuloDestacado.padding"
-                        :imagenDelArticulo="articuloDestacado.image" 
-                        :nombreDelArticulo="articuloDestacado.titulo" 
-                        :autorDelArticulo="articuloDestacado.autor"
-                        :avatarDelAutor="articuloDestacado.fotoDelAutor"
+                        :idDelArticulo = "articuloDestacado.idDelArticulo"
                       >
                       </ThePostCardModel>
                   </v-col>
@@ -87,7 +79,7 @@
 <script>
 
 import TheCourseCardModel from '@/components/TheCourseCardModel';
-import ThePostCardModel from '@/components/ThePostCardModel';
+import ThePostCardModel from '@/components/BlogComponents/ThePostCardModel';
 import TheProfesionCardModel from '@/components/TheProfesionCardModel';
 
 export default {
@@ -106,7 +98,9 @@ export default {
                         image: "MiniaturaGestionDeNomina.jpg",
                         padding: "pt-2",
                         capacitador: "Estefania Cazares",
-                        fotoDelCapacitador: "/CapacitadorDePrueba.jpg"
+                        fotoDelCapacitador: "/CapacitadorDePrueba.jpg",
+                        idDelCurso: "norma035",
+                        link: "/cursos/NominaIntegral"
                       },
                       {
                         titulo: "Gestion de Proyectos",
@@ -114,7 +108,9 @@ export default {
                         image: "MiniaturaGestionDeProyectos.jpg",
                         padding: "pt-2",
                         capacitador: "Estefania Cazares",
-                        fotoDelCapacitador: "CapacitadorDePrueba.jpg"
+                        idDelCurso: "equiposAgiles",
+                        fotoDelCapacitador: "/CapacitadorDePrueba.jpg",
+                        link: "/cursos/GestionDeProyectos"
                       },
                       {
                         titulo: "Liderazgo Agil",
@@ -122,7 +118,9 @@ export default {
                         image: "MiniaturaLiderazgoAgil.jpg",
                         padding: "pt-2",
                         capacitador: "Estefania Cazares",
-                        fotoDelCapacitador: "CapacitadorDePrueba.jpg"
+                        idDelCurso: "norma035",
+                        fotoDelCapacitador: "/CapacitadorDePrueba.jpg",
+                        link: "/cursos/LiderazgoAgil"
                       },
                       {
                         titulo: "Norma 035",
@@ -130,7 +128,8 @@ export default {
                         image: "MiniaturaNorma035.jpg",
                         padding: "pt-2",
                         capacitador: "Estefania Cazares",
-                        fotoDelCapacitador: "CapacitadorDePrueba.jpg",
+                        idDelCurso: "equiposAgiles",
+                        fotoDelCapacitador: "/CapacitadorDePrueba.jpg",
                         link: "../cursos/norma035",
                       },
             ],
@@ -142,6 +141,7 @@ export default {
                         padding: "pt-2",
                         autor: "Estefania Cazares",
                         fotoDelAutor: "CapacitadorDePrueba.jpg",
+                        idDelArticulo: "norma035",
                       },
                       {
                         titulo: "Adquiere Mas",
@@ -150,6 +150,7 @@ export default {
                         padding: "pt-2",
                         autor: "Estefania Cazares",
                         fotoDelAutor: "CapacitadorDePrueba.jpg",
+                        idDelArticulo: "norma035",
                       },
                       {
                         titulo: "Sobre Leer",
@@ -158,15 +159,9 @@ export default {
                         padding: "pt-2",
                         autor: "Estefania Cazares",
                         fotoDelAutor: "CapacitadorDePrueba.jpg",
+                        idDelArticulo: "norma035",
                       },
-                      {
-                        titulo: "Ambiente Laboral",
-                        description: "Lorem Ipsum la dasd difuse and lazer ipstrusm",
-                        image: "ImagenMini2.jpg",
-                        padding: "pt-2",
-                        autor: "Estefania Cazares",
-                        fotoDelAutor: "CapacitadorDePrueba.jpg",
-                      },
+                      
             ],
             profesionesDestacadas: [
                       {

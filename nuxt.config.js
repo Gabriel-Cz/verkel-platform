@@ -18,15 +18,15 @@ export default {
       },
       { 
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Roboto&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Kameron&display=swap',
       },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Raleway&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Volkhov&display=swap',
       },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Lateef&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Lora&display=swap',
       }
     ]
   },
@@ -69,6 +69,7 @@ export default {
     services: {
       auth: true,
       firestore: true,
+      storage: true,
       firestore: {
         memoryOnly: false, // default
         chunkName: process.env.NODE_ENV !== 'production' ? 'firebase-auth' : '[id]', // default

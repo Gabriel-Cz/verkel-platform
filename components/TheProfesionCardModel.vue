@@ -1,11 +1,9 @@
 <template>
     <div>
         <v-card
-          :style="cardCustomStyle"
           color="transparent" 
           style="font-family: Latee;">
             <v-card-title 
-              style="border: 1px solid #59324C; border-bottom: none;"  
               class="d-flex justify-center">
                 {{ nombreDeLaProfesion }}
             </v-card-title>

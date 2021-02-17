@@ -63,7 +63,7 @@ export default {
           this.formData.email,
           this.formData.password,
         ).then(data => {
-          console.log('Iniciando Sesion')
+          alert('Iniciando Sesion')
           this.$router.push('/user/usuario1')
         })
       } catch(error) {

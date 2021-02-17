@@ -19,7 +19,13 @@
             <p class="ma-15 mt-15 mb-5">Plataforma de capacitacion enfocada a Ciencias Humanas.</p>
             <p class="ma-15 mt-10 pa-10 pt-0 divOverflowDescription">
               Desarolla conocimiento agil con la primera plataforma de capacitacion profesional de America Latina.</p> 
-              <v-btn class="divOverflowBtn blue --darken-2" large>Descubre Verkel</v-btn>
+              <v-btn 
+                class="divOverflowBtn blue --darken-2" 
+                nuxt-link to="sobre-verkel"
+                large
+              >
+                  Descubre Verkel
+                </v-btn>
           </div>
           
     </v-container>

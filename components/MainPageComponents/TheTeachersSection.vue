@@ -22,11 +22,8 @@
                 <p class="profesionalesTexto">Profesionales de Verkel</p>
                 <div>
                     <p class="profesionalesDescripcion pa-10 pl-4">
-                        Capacitados mediante recursos pedagogicos otorgados por Verkel. Los Profesionales de Verkel 
-                         brindan el conocimiento necesario 
-                        <br/>
-                        para llevar a cabo cursos de alta fidelidad, y asi otorgar la simplicidad en cada materia que se imparte.
-                        <br />Ademas de Llevar al capacitado por un camino practico.
+                        Los capacitadores de Verkel, son profesionistas certificados en diversas áreas de especialización, que otorgan cursos de alta fidelidad y con simplicidad en cada materia que se imparte, 
+                        todo esto mediante recursos pedagogicos y andragógicos  que lleven al usuario por un camino práctico y de inmediata aplicación.
                     </p>
                 </div>
                  <v-btn
