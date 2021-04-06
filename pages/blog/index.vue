@@ -19,7 +19,6 @@ export default {
           hid: "description",
           name: "description",
           content: "Plataforma de Capacitacion numero uno de Mexico",
-
         }
       ],
       htmlAtrrs: {

@@ -1,7 +1,6 @@
 <template>
     <div style="background-image: url(/TheCoursePageMainContainerBG.svg);">
-        <div style="height: 150px;"></div>
-        
+        <div style="height: 150px;"></div> 
             <v-row
               style="background: linear-gradient(90deg, rgba(106,141,175,0.9) 0%, rgba(151,163,190,0.9) 50%, rgba(255,255,255,0.9) 100%);"
               class="d-flex justify-center"

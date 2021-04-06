@@ -38,11 +38,6 @@ import TheFooterContent from '@/components/MainLayoutComponents/TheFooterContent
 import TheBottomNavigationContent from '@/components/MainLayoutComponents/TheBottomNavigationContent';
 
 export default {
-  data () {
-    return {
-      //
-    }
-  },
   components: {
     TheNavbarContent,
     TheFooterContent,
@@ -59,8 +54,6 @@ export default {
 #TheFooter {
   box-shadow: 0px -1px 0px #989696;
 }
-
-
 
 .theme--light.v-application{
   background-image: linear-gradient(to left, var(--v-firstbackground-base), var(--v-secondbackground-base)) !important;;

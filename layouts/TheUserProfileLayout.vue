@@ -1,7 +1,5 @@
 <template>
-  <v-app> 
-  
-    
+  <v-app>   
       <v-app-bar
         id="TheAppBar"
         color="transparent"
@@ -14,14 +12,11 @@
       <div style="height: 100px;"></div>
       
       <v-main>
-
         <v-container fluid>
           <nuxt />
         </v-container>
-
       </v-main>
     
-      
       <v-footer 
         id="TheFooter"
         class="mt-16"

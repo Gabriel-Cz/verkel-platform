@@ -2,7 +2,7 @@
     <div>
       <v-hover v-slot="{ hover }">
         <v-card 
-          nuxt-link to="/cursos/norma035"
+          nuxt-link :to={{$props.link}}
           color="transparent"
           link 
           style="font-family: Latee;">
@@ -42,40 +42,13 @@ import storage from 'firebase/storage';
 
 export default {
     name: "TheCourseCardModel",
-    data () {
-      return {
-        imagenDelCurso: "",
-        nombreDelCurso: "",
-        descripcionDelCurso: "",
-        capacitadorDelCurso: "",
-        avatarDelCapacitador: "",
-      }
+    props: {
+      idDelCurso: String,
+      imagenDelCurso: String,
+      nombreDelCurso: String,
+      descripcionDelCurso: String,
+      capacitadorDelCurso: String,
+      avatarDelCapacitador: String,
     },
-    props: [
-        'idDelCurso'
-    ],
-    created() {
-      this.obtenerInformacionDelCurso();
-    },
-    methods: {
-      async obtenerInformacionDelCurso() {
-        let refCurso = this.$fire.firestore.collection('cursos').doc(this.$props.idDelCurso);
-        try {
-          const snapshot = await refCurso.get();
-          const doc = snapshot.data();
-          if (!doc) {
-            alert('This Document doesn´t exists');
-            return
-          } 
-          this.nombreDelCurso = doc.titulo;
-          this.capacitadorDelCurso = doc.capacitador
-          this.descripcionDelCurso = doc.descripcion;
-          this.avatarDelCapacitador = doc.imagenDelCapacitador;
-          this.imagenDelCurso = doc.imagenDelCurso;
-        } catch(e) {
-          alert('error' + e)
-        }
-      }
-    }
 }
 </script>
