@@ -1,12 +1,15 @@
 const ignorePaths = ["\u002F__webpack_hmr","\u002F_loading","\u002F_nuxt\u002F"]
 
 importScripts(
-  'https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js'
+  'https://www.gstatic.com/firebasejs/8.4.0/firebase-app.js'
 )
 importScripts(
-  'https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js'
+  'https://www.gstatic.com/firebasejs/8.4.0/firebase-auth.js'
 )
-firebase.initializeApp({"apiKey":"AIzaSyCPm8gGQQDMQCpXjiEwVDSN2uevyEVAjr4","authDomain":"plataforma-verkel.firebaseapp.com","databaseURL":"https:\u002F\u002Fplataforma-verkel.firebaseio.com","projectId":"plataforma-verkel","storageBucket":"plataforma-verkel.appspot.com","messagingSenderId":"330786743360","appId":"1:330786743360:web:f4a72a3f0158e356cbeba5","measurementId":"G-W4T7WM4VDF"})
+firebase.initializeApp({"apiKey":"AIzaSyAVtkXLhULsH1u7dqBulK_GSTCzimuQkFE","authDomain":"verkel-platform.firebaseapp.com","databaseURL":"https:\u002F\u002Fverkel-platform-default-rtdb.firebaseio.com","projectId":"verkel-platform","storageBucket":"verkel-platform.appspot.com","messagingSenderId":"915224425610","appId":"1:915224425610:web:c52b62e6d816a9e8ada973"})
+
+// Initialize authService
+const authService = firebase.auth()
 
 /**
  * Returns a promise that resolves with an ID token if available.
@@ -15,7 +18,7 @@ firebase.initializeApp({"apiKey":"AIzaSyCPm8gGQQDMQCpXjiEwVDSN2uevyEVAjr4","auth
  */
 const getIdToken = () => {
   return new Promise((resolve) => {
-    const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
+    const unsubscribe = authService.onAuthStateChanged((user) => {
       unsubscribe()
       if (user) {
         // force token refresh as it might be used to sign in server side

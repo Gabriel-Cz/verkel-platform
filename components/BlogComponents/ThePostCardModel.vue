@@ -1,49 +1,31 @@
 <<template>
     <div>
-            <v-card
-              color="transparent"
-              style="cursor: pointer;"
-              elevation="0"
-              rounded
-            >
+        <v-card
+          color="transparent"
+          style="cursor: pointer;"
+          rounded
+        >
             <v-card-title
-              style="background-color: #6A6A6A;"
-              class="text-center cardTitle justify-center mb-2 white--text" 
-              v-text="tituloDelArticulo"
+              style="background-color: #E0E0E0;"
+              class="text-center cardTitle justify-center mb-2 " 
             >
+                {{ tituloDelArticulo }}
             </v-card-title>
-        
             <v-img  
-              gradient="rgba(230, 230, 230, 0.7), rgba(230, 230, 230, 0.7)"
-              style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);"
+              gradient="rgba(230, 230, 230, 0.8), rgba(230, 230, 230, 0.8)"
               :src="imagenDelArticulo" 
               height="170"
             >
-                <v-row>
-                    <v-col cols="8">
-                        <v-text
-                          class="cardDescription pa-5"
-                          v-text="descripcionDelArticulo"
+                <v-row class="justify-center">
+                    <v-col cols="10">
+                        <p
+                          class="cardDescription pt-4 pa-2 pl-1 pr-1 text-center text-body-2"
                         >
-                        </v-text>
-                    </v-col>
-
-                    <v-col>
-                        <v-row>
-                            <v-col cols="12">
-                                <v-avatar :src="avatarDelAutor"></v-avatar>
-                            </v-col>
-                            <v-col
-                              cols="12"
-                              v-text="autorDelArticulo"
-                            >
-                            </v-col>
-                        </v-row>
+                            {{ descripcionDelArticulo }}
+                        </p>
                     </v-col>
                 </v-row>
-
             </v-img>
-
         </v-card>
     </div>
 </template>
@@ -53,20 +35,16 @@
 import firestore from 'firebase/firestore';
 
     export default {
-        name: "ThePostCardModel.vue",
-        data () {
-            return {
-                tituloDelArticulo: "",
-                descripcionDelArticulo: "",
-                imagenDelArticulo: "",
-                autorDelArticulo: "",
-                avatarDelAutor: "",
-            }
+        name: "ThePostCardModel",
+        props: {
+            idDelArticulo: String,
+            tituloDelArticulo: String,
+            descripcionDelArticulo: String,
+            autorDelArticulo: String,
+            imagenDelArticulo: String,
+            avatarDelAutor: String,
         },
-        props: [
-            "idDelArticulo",
-        ],
-        created() {
+        /* created() {
             this.obtenerArticulo();
         },
         methods: {
@@ -88,7 +66,7 @@ import firestore from 'firebase/firestore';
                     alert('error' + e);
                 }
             }
-        }
+        } */
     }
 </script>
 
@@ -100,7 +78,8 @@ import firestore from 'firebase/firestore';
 }
 
 .cardDescription{
-    font-family: 'Lora', sans-serif ;
+    font-family: 'Roboto', sans-serif ;
+    font-style: italic;
 }
 
 </style>

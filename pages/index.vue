@@ -5,7 +5,6 @@
     <TheTeachersSection></TheTeachersSection>
     <TheToolViewSection></TheToolViewSection>
     <TheEnterpriseSection></TheEnterpriseSection>
-    <TheEsloganSection></TheEsloganSection>
   </div>
 </template>
 

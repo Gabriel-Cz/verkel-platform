@@ -7,7 +7,7 @@
           
               <v-toolbar-title class="cardTitle">
                 <v-img 
-                  src="/Logos/verkel-logo.png" 
+                  src="/Logos/verkel-logo.svg" 
                   width="190" 
                   height="50"
                 >
@@ -27,7 +27,6 @@
                   tile
                 > 
                   <nuxt-link :to="btn.pagina" style="text-decoration: none;">
-                    <v-icon class="pb-1" x-small>mdi-checkbox-blank-circle</v-icon>
                     {{ btn.name }}
                   </nuxt-link>
                 </v-btn>

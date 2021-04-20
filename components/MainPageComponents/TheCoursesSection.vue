@@ -2,20 +2,25 @@
     <v-container fluid class="mt-16 mainContainerCoursesSection">
         <v-row class="mt-16 d-flex justify-center">
             <v-col 
-              cols="12" sm="8" md="12" lg="12"
+              cols="12"
             >
               <v-card color="transparent">
                 <v-card-title><span class="ribbon3">Cursos Destacados</span></v-card-title>
                 <v-card-text class="mt-16">
-                <v-row>
+                <v-row class="justify-center">
                   <v-col
-                    class="justify-center"
-                    cols="12" sm="8" md="3" lg="3"
-                    v-for="cursoDestacado in cursosDestacados"
-                    :key="cursoDestacado.name"
+                    class=""
+                    cols="12" sm="6" md="4" lg="3"
+                    v-for="curso in cursosDestacados"
+                    :key="curso.name"
                   >  
                     <TheCourseCardModel 
-                      :idDelCurso = "cursoDestacado.idDelCurso" 
+                      :idDelCurso="curso.id"
+                      :imagenDelCurso="curso.imagen"
+                      :nombreDelCurso="curso.titulo"
+                      :descripcionDelCurso="curso.descripcion"
+                      :capacitadorDelCurso="curso.capacitador"
+                      :avatarDelCapacitador="curso.avatar"
                     >
                     </TheCourseCardModel>
                   </v-col>
@@ -24,21 +29,25 @@
               </v-card>
             </v-col>
             <v-col 
-              class="" 
-              cols="12" sm="8" md="12" lg="12"
+              cols="12"
             >
               <v-card color="transparent">
                 <v-card-title><span class="ribbonArticulosTitle">Articulos Destacados</span></v-card-title>
                 <v-card-text class="mt-16">
-                <v-row>
+                <v-row class="d-flex justify-center">
                   <v-col
-                    cols="12" sm="12" md="4" lg="4"
+                    cols="12" sm="6" md="4" lg="3"
                     class="justify-center"
-                    v-for="articuloDestacado in articulosDestacados"
-                    :key="articuloDestacado.name"
+                    v-for="articulo in articulosDestacados"
+                    :key="articulo._id"
                   >
                       <ThePostCardModel
-                        :idDelArticulo = "articuloDestacado.idDelArticulo"
+                        :idDelArticulo="articulo._id"
+                        :tituloDelArticulo="articulo.titulo"
+                        :autorDelArticulo="articulo.autor"
+                        :avatarDelAutor="articulo.avatar"
+                        :imagenDelArticulo="articulo.imagen"
+                        :descripcionDelArticulo="articulo.descripcion"
                       >
                       </ThePostCardModel>
                   </v-col>
@@ -47,24 +56,24 @@
               </v-card>
             </v-col>
             <v-col 
-              cols="12" sm="8" md="12" lg="12"
+              cols="12"
             >
               <v-card color="transparent">
                 <v-card-title><span class="ribbonCard-Profesiones">Profesiones Destacadas</span></v-card-title>
                 <v-card-text class="mt-16">
-              <v-row>
+              <v-row class="d-flex justify-center">
                 <v-col
-                  cols="12" sm="2" md="3" lg="3"
+                  cols="12" sm="6" md="4" lg="3"
                   class="justify-center"
-                  v-for="ProfesionDestacada in profesionesDestacadas"
-                  :key="ProfesionDestacada.titulo"
+                  v-for="profesion in profesionesDestacadas"
+                  :key="profesion.titulo"
                 >
                     <TheProfesionCardModel
-                      :class="ProfesionDestacada.padding"
-                      :imagenDeLaProfesion="ProfesionDestacada.image" 
-                      :nombreDeLaProfesion="ProfesionDestacada.titulo" 
-                      :categoriaDeLaProfesion="ProfesionDestacada.categoria"
-                      :avatarDeLaProfesion="ProfesionDestacada.image"
+                      class="pt-2"
+                      :imagenDeLaProfesion="profesion.imagen" 
+                      :nombreDeLaProfesion="profesion.titulo" 
+                      :categoriaDeLaProfesion="profesion.categoria"
+                      :avatarDeLaProfesion="profesion.avatar"
                     >
                     </TheProfesionCardModel>
                 </v-col>
@@ -81,127 +90,36 @@
 import TheCourseCardModel from '@/components/TheCourseCardModel';
 import ThePostCardModel from '@/components/BlogComponents/ThePostCardModel';
 import TheProfesionCardModel from '@/components/TheProfesionCardModel';
+import { mapState, mapActions } from 'vuex';
 
 export default {
-    name: "SecondContent",
+    name: "TheCoursesSection",
     components: {
       TheCourseCardModel,
       ThePostCardModel,
       TheProfesionCardModel,
     },
-    data () {
-        return {
-            cursosDestacados: [
-                      {
-                        titulo: "Nomina Integral",
-                        description: "Lorem Ipsum la dasd difuse and lazer ipstrusm Ipsum la dasd difuse and lazer ipstrusm Ipsum la dasd difuse and lazer ipstrusm" ,
-                        image: "MiniaturaGestionDeNomina.jpg",
-                        padding: "pt-2",
-                        capacitador: "Estefania Cazares",
-                        fotoDelCapacitador: "/CapacitadorDePrueba.jpg",
-                        idDelCurso: "norma035",
-                        link: "/cursos/NominaIntegral"
-                      },
-                      {
-                        titulo: "Gestion de Proyectos",
-                        description: "Lorem Ipsum la dasd difuse and lazer ipstrusm" ,
-                        image: "MiniaturaGestionDeProyectos.jpg",
-                        padding: "pt-2",
-                        capacitador: "Estefania Cazares",
-                        idDelCurso: "equiposAgiles",
-                        fotoDelCapacitador: "/CapacitadorDePrueba.jpg",
-                        link: "/cursos/GestionDeProyectos"
-                      },
-                      {
-                        titulo: "Liderazgo Agil",
-                        description: "Lorem Ipsum la dasd difuse and lazer ipstrusm",
-                        image: "MiniaturaLiderazgoAgil.jpg",
-                        padding: "pt-2",
-                        capacitador: "Estefania Cazares",
-                        idDelCurso: "norma035",
-                        fotoDelCapacitador: "/CapacitadorDePrueba.jpg",
-                        link: "/cursos/LiderazgoAgil"
-                      },
-                      {
-                        titulo: "Norma 035",
-                        description: "Lorem Ipsum la dasd difuse and lazer ipstrusm",
-                        image: "MiniaturaNorma035.jpg",
-                        padding: "pt-2",
-                        capacitador: "Estefania Cazares",
-                        idDelCurso: "equiposAgiles",
-                        fotoDelCapacitador: "/CapacitadorDePrueba.jpg",
-                        link: "../cursos/norma035",
-                      },
-            ],
-            articulosDestacados: [
-                      {
-                        titulo: "Tiempos Dificiles",
-                        description: "Lorem Ipsum la dasd difuse and lazer ipstrusm Ipsum la dasd difuse and lazer ipstrusm Ipsum la dasd difuse and lazer ipstrusm" ,
-                        image: "post1.jpg",
-                        padding: "pt-2",
-                        autor: "Estefania Cazares",
-                        fotoDelAutor: "CapacitadorDePrueba.jpg",
-                        idDelArticulo: "norma035",
-                      },
-                      {
-                        titulo: "Adquiere Mas",
-                        description: "Lorem Ipsum la dasd difuse and lazer ipstrusm" ,
-                        image: "post2.jpg",
-                        padding: "pt-2",
-                        autor: "Estefania Cazares",
-                        fotoDelAutor: "CapacitadorDePrueba.jpg",
-                        idDelArticulo: "norma035",
-                      },
-                      {
-                        titulo: "Sobre Leer",
-                        description: "Lorem Ipsum la dasd difuse and lazer ipstrusm",
-                        image: "post3.jpg",
-                        padding: "pt-2",
-                        autor: "Estefania Cazares",
-                        fotoDelAutor: "CapacitadorDePrueba.jpg",
-                        idDelArticulo: "norma035",
-                      },
-                      
-            ],
-            profesionesDestacadas: [
-                      {
-                        titulo: "Recursos Humanos",
-                        description: "Lorem Ipsum la dasd difuse and lazer ipstrusm Ipsum la dasd difuse and lazer ipstrusm Ipsum la dasd difuse and lazer ipstrusm" ,
-                        image: "ImagenMini.jpg",
-                        padding: "pt-2",
-                        categoria: "Recursos Humanos",
-                        avatarDeLaProfesion: "EquiposAgiles3.jpg"
-                      },
-                      {
-                        titulo: "Equipos Agiles",
-                        description: "Lorem Ipsum la dasd difuse and lazer ipstrusm" ,
-                        image: "MiniaturaEquiposAgiles.jpg",
-                        padding: "pt-2",
-                        categoria: "Recursos Humanos",
-                        avatarDeLaProfesion: "EquiposAgiles3.jpg"
-                      },
-                      {
-                        titulo: "Lorem Ipsum",
-                        description: "Lorem Ipsum la dasd difuse and lazer ipstrusm",
-                        image: "Random1.jpg",
-                        padding: "pt-2",
-                        categoria: "Recursos Humanos",
-                        avatarDeLaProfesion: "EquiposAgiles3.jpg"
-                      },
-                      {
-                        titulo: "Ipsum Lorem",
-                        description: "Lorem Ipsum la dasd difuse and lazer ipstrusm",
-                        image: "ImagenMini2.jpg",
-                        padding: "pt-2",
-                        categoria: "Recursos Humanos",
-                        avatarDeLaProfesion: "EquiposAgiles3.jpg"
-                      },
-            ],
-        }
+    created() {
+      this.getTopPosts(),
+      this.getTopProfesions(),
+      this.getTopCourses()
     },
-    components: {
-        //
-    }
+    computed: {
+      ...mapState('profesions', {
+        profesionesDestacadas: state => state.topProfesions
+      }),
+      ...mapState('posts', {
+        articulosDestacados: state => state.topPosts
+      }),
+      ...mapState('courses', {
+        cursosDestacados: state => state.topCourses
+      })
+    },
+    methods: {
+      ...mapActions('profesions', ['getTopProfesions']),
+      ...mapActions('posts', ['getTopPosts']),
+      ...mapActions('courses', ['getTopCourses'])
+    },
 }
 </script>
 

@@ -4,11 +4,12 @@
         style="border-bottom: 1px ridge black;"
         flat
         id="TheAppBar"
-        color="transparent"
+        color="white"
+        v-show="navbar"
       >
         <TheNavbarContent></TheNavbarContent>  
       </v-app-bar>
-    
+      <TheMobileNavbar v-show="mobileNavbar" />
       <v-main>
 
         <v-container fluid>
@@ -35,6 +36,7 @@
 <script>
 import TheNavbarContent from '@/components/MainLayoutComponents/TheNavbarContent';
 import TheFooterContent from '@/components/MainLayoutComponents/TheFooterContent'
+import TheMobileNavbar from '@/components/MainLayoutComponents/TheMobileNavbar'
 import TheBottomNavigationContent from '@/components/MainLayoutComponents/TheBottomNavigationContent';
 
 export default {
@@ -47,6 +49,24 @@ export default {
     TheNavbarContent,
     TheFooterContent,
     TheBottomNavigationContent,
+    TheMobileNavbar
+  },
+  computed: {
+    mobileNavbar() {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs': return true
+        case 'sm': return true
+      }
+    },
+    navbar() {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs': return false
+        case 'sm': return false
+        case 'md': return true
+        case 'lg': return true
+        case 'xl': return true
+      }
+    }
   }
 }
 </script>

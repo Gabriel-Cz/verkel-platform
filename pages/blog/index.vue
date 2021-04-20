@@ -1,7 +1,7 @@
 <<template>
     <div>
       <TheBlogHeader></TheBlogHeader>
-      <TheBlogContentBody></TheBlogContentBody>
+      <TheBlogContentBody :posts="this.posts" ></TheBlogContentBody>
     </div>
 </template>
 
@@ -9,9 +9,10 @@
 
 import TheBlogHeader from '@/components/BlogComponents/TheBlogHeader';
 import TheBlogContentBody from '@/components/BlogComponents/TheBlogContentBody';
+import { mapState, mapActions } from 'vuex';
 
 export default {
-    head () {
+  head () {
     return {
       title: "Plataforma Verkel | Blog",
       meta: [
@@ -29,6 +30,17 @@ export default {
   components: {
       TheBlogHeader,
       TheBlogContentBody,
+  },
+  computed: {
+    ...mapState('posts', {
+      posts: state => state.posts
+    })
+  },
+  methods: {
+    ...mapActions('posts', ['getPosts'])
+  },
+  created() {
+    this.getPosts();
   }
 }
 

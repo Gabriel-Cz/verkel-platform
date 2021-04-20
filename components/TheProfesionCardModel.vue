@@ -10,7 +10,7 @@
             <v-img :src="imagenDeLaProfesion" height="150" ></v-img>
             <v-card-actions >
                 <v-avatar
-                style="margin-top: -64px; border: solid white 1px;"
+                  style="margin-top: -64px; border: solid white 1px;"
                   size="60px"
                 >
                     <v-img :src="avatarDeLaCategoria" ></v-img>
@@ -24,13 +24,13 @@
 <script>
 export default {
     name: "TheProfesionCardModel",
-    props: [
-        'imagenDeLaProfesion',
-        'nombreDeLaProfesion',
-        'categoriaDeLaProfesion',
-        'avatarDeLaCategoria',
-        'cardCustomStyle',
-        'cardTitleCustomStyle',
-    ],
+    props: {
+        imagenDeLaProfesion: String,
+        nombreDeLaProfesion: String,
+        categoriaDeLaProfesion: String,
+        avatarDeLaProfesion: String,
+        cardCustomStyle: String,
+        cardTitleCustomStyle: String
+    },
 }
 </script>

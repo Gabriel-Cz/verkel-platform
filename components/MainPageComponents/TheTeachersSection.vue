@@ -13,42 +13,44 @@
             </v-col>
         </v-row>
         <v-row
-          class="d-flex justify-center"
+          class="justify-center"
         >
             <v-col
-              cols="10" sm="12" md="7" lg="7"
-              class=""
+              cols="12" md="7" lg="5"
+              class="d-flex flex-column justify-center"
             >
-                <p class="profesionalesTexto">Profesionales de Verkel</p>
+                <p class="profesionalesTexto text-center">Profesionales de Verkel</p>
                 <div>
-                    <p class="profesionalesDescripcion pa-10 pl-4">
+                    <p class="profesionalesDescripcion pa-10 pt-5 text-center">
                         Los capacitadores de Verkel, son profesionistas certificados en diversas áreas de especialización, que otorgan cursos de alta fidelidad y con simplicidad en cada materia que se imparte, 
                         todo esto mediante recursos pedagogicos y andragógicos  que lleven al usuario por un camino práctico y de inmediata aplicación.
                     </p>
                 </div>
-                 <v-btn
+                 <div class="d-flex justify-center">
+                   <v-btn
                   rounded
                   outlined
-                  class="ir-profesionales ml-4"
+                  small
+                  class="py-2"
                   color="#5e949f"
                 >
-                    Aprende mas sobre los Profesionales de Verkel
+                    Aprende sobre los Profesionales de Verkel
                 </v-btn>
+                 </div>
             </v-col>
             <v-col
-              class="d-flex justify-start ml-16 pl-3"
+              class="d-flex justify-start ml-md-16 pl-md-3"
               cols="12" sm="10" md="5" lg="5"
             >
                <v-img src="ImagenProfesionales.png"></v-img>
             </v-col>
         </v-row>
         <v-row>
-            <v-col class="d-flex justify-start">
+            <v-col cols="12" class="d-flex">
                 <svg width="1345" height="143" viewBox="0 0 1345 143" fill="none" xmlns="http://www.w3.org/2000/svg">
-<line y1="-1" x2="1340.98" y2="-1" transform="matrix(-0.995362 0.0961984 -0.0702176 -0.997532 1334.76 12)" stroke="#C4C4C4" stroke-width="2"/>
-<circle cx="1330.25" cy="14.25" r="8.75" transform="rotate(180 1330.25 14.25)" fill="#C4C4C4"/>
-</svg>
-
+                  <line y1="-1" x2="1340.98" y2="-1" transform="matrix(-0.995362 0.0961984 -0.0702176 -0.997532 1334.76 12)" stroke="#C4C4C4" stroke-width="2"/>
+                  <circle cx="1330.25" cy="14.25" r="8.75" transform="rotate(180 1330.25 14.25)" fill="#C4C4C4"/>
+                </svg>
             </v-col>
         </v-row>
     </div>
@@ -57,26 +59,20 @@
 <script>
 export default {
     name: "TheTeachersSection",
-    data () {
-        //
-    },
-    components: {
-        //
-    }
 }
 </script>
 
-<style scoped>
+<style style="scss" scoped>
 
 .profesionalesTexto{
-      font-size: 60px;
-      color: #808080;
-      border-bottom: 2px solid #808080;
-  }
+  font-size: 32px;
+  color: #686868;
+}
 
 .profesionalesDescripcion{
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: #808080;
 }
 
 .svgRow{

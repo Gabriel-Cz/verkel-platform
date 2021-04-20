@@ -52,18 +52,18 @@ export default {
   modules: [
     '@nuxtjs/pwa',
     '@nuxtjs/firebase',
+    '@nuxtjs/axios',
   ],
 
   firebase: {
       config: {
-        apiKey: "AIzaSyCPm8gGQQDMQCpXjiEwVDSN2uevyEVAjr4",
-        authDomain: "plataforma-verkel.firebaseapp.com",
-        databaseURL: "https://plataforma-verkel.firebaseio.com",
-        projectId: "plataforma-verkel",
-        storageBucket: "plataforma-verkel.appspot.com",
-        messagingSenderId: "330786743360",
-        appId: "1:330786743360:web:f4a72a3f0158e356cbeba5",
-        measurementId: "G-W4T7WM4VDF"
+        apiKey: "AIzaSyAVtkXLhULsH1u7dqBulK_GSTCzimuQkFE",
+        authDomain: "verkel-platform.firebaseapp.com",
+        databaseURL: "https://verkel-platform-default-rtdb.firebaseio.com",
+        projectId: "verkel-platform",
+        storageBucket: "verkel-platform.appspot.com",
+        messagingSenderId: "915224425610",
+        appId: "1:915224425610:web:c52b62e6d816a9e8ada973"
       },
     // ...
     services: {

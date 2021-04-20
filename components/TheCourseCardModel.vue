@@ -2,7 +2,7 @@
     <div>
       <v-hover v-slot="{ hover }">
         <v-card 
-          nuxt-link :to={{$props.link}}
+          nuxt-link :to="$props.link"
           color="transparent"
           link 
           style="font-family: Latee;">
@@ -12,10 +12,10 @@
                 <v-expand-transition>
                     <div
                       v-if="hover"
-                      class="d-flex transition-fast-in-fast-out  v-card--reveal body-2 gray--text"
+                      class="d-flex transition-fast-in-fast-out  v-card--reveal gray--text text-center d-flex justify-center"
                       style="height: 100%; background-color: rgba(255, 255, 255, 0.7); color: black;"
                     >
-                        <p class="pa-2">{{ descripcionDelCurso }}</p>
+                        <p class="pa-2 pt-4 text-body-2">{{ descripcionDelCurso }}</p>
                     </div>
                 </v-expand-transition>
             </v-img>
@@ -37,9 +37,6 @@
 
 <script>
 
-import firestore from 'firebase/firestore';
-import storage from 'firebase/storage';
-
 export default {
     name: "TheCourseCardModel",
     props: {
@@ -51,4 +48,5 @@ export default {
       avatarDelCapacitador: String,
     },
 }
+
 </script>
