@@ -2,12 +2,15 @@
     <div style="background-image: url(/TheCoursePageMainContainerBG.svg);">
         <div style="height: 150px;"></div> 
             <v-row
-              style="background: linear-gradient(90deg, rgba(106,141,175,0.9) 0%, rgba(151,163,190,0.9) 50%, rgba(255,255,255,0.9) 100%);"
+              id="rowProfesiones"
               class="d-flex justify-center"
             >
+                <div class="profesionsOverflowDiv"></div>
                 <v-col
                 align-self="end"
-                  cols="6"
+                  cols="12"
+                  md="8"
+                  lg="6"
                 >
                     <TheCourseInfoModel 
                       :divInfoTitle="divProfesiones.titulo" 
@@ -16,7 +19,10 @@
                 </v-col>
 
                 <v-col
-                  cols="3"
+                  cols="12"
+                  sm="6"
+                  md="4"
+                  lg="3"
                   class="mt-8"
                   v-for="profesion in profesiones"
                   :key="profesion.name"
@@ -34,7 +40,7 @@
                     <v-btn 
                       dark
                       rounded
-                      color="primary"
+                      color="#039BE5"
                       class="mb-4"
                     >
                         Ver Profesiones
@@ -43,10 +49,14 @@
             </v-row>
             <div style="height: 100px;"></div>
             <v-row
+              id="rowCursos"
               class="d-flex justify-center mt-16"
             >
+                <div class="cursosOverflowDiv"></div>
                 <v-col
-                  cols="6"
+                  cols="12"
+                  md="8"
+                  lg="6"
                 >
                     <TheCourseInfoModel
                       :divInfoTitle="divCursos.titulo"
@@ -54,7 +64,11 @@
                     ></TheCourseInfoModel>
                 </v-col>
                 <v-col 
-                  cols="3"
+                  cols="12"
+                  sm="6"
+                  md="4"
+                  lg="3"
+                  class="mt-8"
                   v-for="curso in cursos"
                   :key="curso.titulo"
                 >
@@ -69,8 +83,8 @@
                     <v-btn 
                       class="mb-4"
                       rounded
-                      outlined
-                      color="#FFA726"
+                      color="#757575"
+                      dark
                     >
                         Ver Cursos
                     </v-btn>
@@ -78,11 +92,14 @@
             </v-row>
             <div style="height: 100px;"></div>
             <v-row
+              id="rowEspecializaciones"
               class="d-flex justify-center mt-16"
-              style="background: linear-gradient(90deg, rgba(166,84,84,0.9) 0%, rgba(190,151,151,0.9) 50%, rgba(255,255,255,0.9) 100%);"
             >
+                <div class="especializacionesOverflowDiv"></div>
                 <v-col
-                  cols="6"
+                  cols="12"
+                  md="8"
+                  lg="6"
                   align-self="start"
                 >
                     <TheCourseInfoModel
@@ -93,7 +110,10 @@
                 </v-col>
                 <v-col
                   class="mt-8"
-                  cols="3"
+                  cols="12"
+                  sm="6"
+                  md="4"
+                  lg="3"
                   v-for="especializacion in especializaciones"
                   :key="especializacion.titulo"
                 >
@@ -107,10 +127,9 @@
                 <v-col cols="12" class="d-flex align-start justify-center mt-10">
                     <v-btn
                       class="mb-4" 
-                      rounded
-                      outlined
-                      
-                      color="red"
+                      rounded                      
+                      color="#7CB342"
+                      dark
                     >
                         Ver Especializaciones
                     </v-btn>
@@ -162,88 +181,76 @@ export default {
             profesiones: [
                 {
                     titulo: "Recursos Humanos",
-                    imagen: "/CoursesPageImages/RecursosHumanosCategoria.jpg",
-                    padding: "pa-8 pt-0 pb-0 ",
+                    imagen: "",
+                    link: "",
                     categoria: "Recursos Humanos",
-                    avatar: "CapacitadorDePrueba.jpg",
-                    cardCustomStyle: "color: floralwhite;",
-                    cardTitleCustomStyle: "border: 1px solid floralwhite; border-bottom: none;",
+                    avatar: "",
                 },
                 {
                     titulo: "Gestion de Equipos",
                     imagen: "MiniaturaEquiposAgiles.jpg",
-                    padding: "pa-8 pt-0 pb-0",
+                    link: "",
                     categoria: "Metodologia Agil",
                     avatar: "CapacitadorDePrueba.jpg",
-                    cardCustomStyle: "color: floralwhite;",
-                    cardTitleCustomStyle: "border: 1px solid floralwhite; border-bottom: none;",
                 },
                 {
                     titulo: "Recursos Humanos",
-                    imagen: "/CoursesPageImages/RecursosHumanosCategoria.jpg",
-                    padding: "pa-8 pt-0 pb-0 ",
+                    imagen: "",
+                    link: "",
                     categoria: "Recursos Humanos",
-                    avatar: "CapacitadorDePrueba.jpg",
-                    cardCustomStyle: "color: floralwhite;",
-                    cardTitleCustomStyle: "border: 1px solid floralwhite; border-bottom: none;",
+                    avatar: "",
                 },
                 {
                     titulo: "Equipos Agiles",
                     imagen: "MiniaturaEquiposAgiles.jpg",
-                    padding: "pa-8 pt-0 pb-0",
+                    link: "",
                     categoria: "Metodologia Agil",
-                    avatar: "CapacitadorDePrueba.jpg",
-                    cardCustomStyle: "color: floralwhite;",
-                    cardTitleCustomStyle: "border: 1px solid floralwhite; border-bottom: none;",
+                    avatar: "",
                 }
             ],
             cursos: [
                 {
                     titulo: "Liderazgo Agil",
                     imagen: "/LiderazgoAgilMiniatura.jpg",
-                    padding: "pa-8 pt-0 pb-0",
+                    link: "",
                     capacitador: "Estefania Cazares",
-                    avatar: "CapacitadorDePrueba.jpg",
+                    avatar: "",
                 },
                 {
                     titulo: "Norma-035",
                     imagen: "/CoursesPageImages/Norma035Miniatura.jpg",
-                    padding: "pa-8 pt-0 pb-0 ",
+                    link: "",
                     capacitador: "Estefania Cazares",
-                    avatar: "CapacitadorDePrueba.jpg",
-                    link: "../cursos/norma035",
+                    avatar: "",
+                    link: "/cursos/norma035",
                 },
                 {
                     titulo: "Scrum",
                     imagen: "/CoursesPageImages/ScrumMiniatura.jpg",
-                    padding: "pa-8 pt-0 pb-0",
+                    link: "",
                     capacitador: "Estefania Cazares",
-                    avatar: "CapacitadorDePrueba.jpg",
+                    avatar: "",
                 },
                 {
                     titulo: "Nomina Integral",
                     imagen: "/CoursesPageImages/NominaIntegralMiniatura.jpg",
-                    padding: "pa-8 pt-0 pb-0",
+                    link: "",
                     capacitador: "Estefania Cazares",
-                    avatar: "CapacitadorDePrueba.jpg",
+                    avatar: "",
                 }
             ],
             especializaciones: [
                 {
                     titulo: "Nomina Integral",
                     imagen: "/CoursesPageImages/NominaIntegralMiniatura.jpg",
-                    padding: "pa-8 pt-0 pb-0 ",
+                    link: "",
                     institucion: "Universidad Autonoma",
-                    cardCustomStyle: "color: floralwhite;",
-                    cardTitleCustomStyle: "border: 1px solid floralwhite; border-bottom: none;"
                 },
                 {
                     titulo: "Metodologia Agil",
                     imagen: "/MetodologiaAgil.jpg",
-                    padding: "pa-8 pt-0 pb-0",
+                    link: "",
                     institucion: "Universidad Autonoma",
-                    cardCustomStyle: "color: floralwhite;",
-                    cardTitleCustomStyle: "border: 1px solid floralwhite; border-bottom: none;"
                 }
             ]
         }
@@ -251,7 +258,52 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+$profesionesBg: linear-gradient(264.59deg, rgba(81, 153, 193, 0.5) 0%, rgba(50, 91, 139, 0.5) 100%);
+$especializacionesBg: linear-gradient(264.59deg, rgba(151, 193, 81, 0.5) 0%, rgba(44, 104, 64, 0.5) 100%);
+$cursosBg: linear-gradient(264.59deg, rgba(206, 208, 201, 0.5) 0%, rgba(106, 112, 108, 0.5) 100%);
+
+  #rowProfesiones {
+    position: relative;
+    overflow: hidden;
+    .profesionsOverflowDiv {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: $profesionesBg;
+      transform: skew(36deg);
+    }
+  }
+
+  #rowCursos {
+    position: relative;
+    overflow: hidden;
+    .cursosOverflowDiv {
+      background: $cursosBg;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform: skew(36deg);
+    }
+  }
+
+  #rowEspecializaciones {
+    position: relative;
+    overflow: hidden;
+    .especializacionesOverflowDiv {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: $especializacionesBg;
+      transform: skew(36deg);
+    }
+  }
+
+  .especializacionesTitulo{
+    border: 3px double #a88436;
+    box-shadow: -6px 6px 0px #C4C4C4;
+  }
 
   .TheCoursesPageMainContainer{
     background-image: url('/TheCoursePageMainContainerBG.svg');
@@ -304,12 +356,6 @@ export default {
     border: 3px double #365AA8;
     box-shadow: -6px 6px 0px #C4C4C4;
   }
-
-  .especializacionesTitulo{
-    border: 3px double #a88436;
-    box-shadow: -6px 6px 0px #C4C4C4;
-  }
-
  
 
 </style>

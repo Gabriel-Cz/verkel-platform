@@ -1,0 +1,171 @@
+{
+    "profesiones": [
+        {
+            "titulo": "Recursos Humanos",
+            "imagen": "",
+            "link": "",
+            "categoria": "Recursos Humanos",
+            "avatar": ""
+        },
+        {
+            "titulo": "Gestion de Equipos",
+            "imagen": "",
+            "link": "",
+            "categoria": "Metodologia Agil",
+            "avatar": "CapacitadorDePrueba.jpg"
+        },
+        {
+            "titulo": "Recursos Humanos",
+            "imagen": "",
+            "link": "",
+            "categoria": "Recursos Humanos",
+            "avatar": ""
+        },
+        {
+            "titulo": "Equipos Agiles",
+            "imagen": "",
+            "link": "",
+            "categoria": "Metodologia Agil",
+            "avatar": ""
+        }
+    ],
+    "cursos": [
+        {
+            "titulo": "Liderazgo Agil",
+            "imagen": "",
+            "link": "",
+            "capacitador": "Estefania Cazares",
+            "avatar": ""
+        },
+        {
+            "titulo": "Norma-035",
+            "imagen": "",
+            "capacitador": "Estefania Cazares",
+            "avatar": "",
+            "link": ""
+        },
+        {
+            "titulo": "Scrum",
+            "imagen": "",
+            "link": "",
+            "capacitador": "Estefania Cazares",
+            "avatar": ""
+        },
+        {
+            "titulo": "Nomina Integral",
+            "imagen": "",
+            "link": "",
+            "capacitador": "Estefania Cazares",
+            "avatar": ""
+        }
+    ],
+    "especializaciones": [
+        {
+            "titulo": "Nomina Integral",
+            "imagen": "",
+            "link": "",
+            "institucion": "Universidad Autonoma"
+        },
+        {
+            "titulo": "Metodologia Agil",
+            "imagen": "",
+            "link": "",
+            "institucion": "Universidad Autonoma"
+        }
+    ],
+    "cursosDestacados": [
+        {
+          "titulo": "Nomina Integral",
+          "description": "Lorem Ipsum la dasd difuse and lazer ipstrusm Ipsum la dasd difuse and lazer ipstrusm Ipsum la dasd difuse and lazer ipstrusm" ,
+          "image": "gs://verkel-platform.appspot.com/ImagenesParaLosCursos/NominaIntegralMiniatura.jpg",
+          "capacitador": "Estefania Cazares",
+          "fotoDelCapacitador": "https://firebasestorage.googleapis.com/v0/b/verkel-platform.appspot.com/o/ImagenesCapacitadores%2FCapacitadorDePrueba.jpg?alt=media&token=02854572-2af6-418f-9b6f-be5e5f8be4d4",
+          "idDelCurso": "norma035",
+          "link": "/cursos/NominaIntegral"
+        },
+        {
+          "titulo": "Gestion de Proyectos",
+          "description": "Lorem Ipsum la dasd difuse and lazer ipstrusm" ,
+          "image": "gs://verkel-platform.appspot.com/ImagenesParaLosCursos/ScrumMiniatura.jpg",
+          "capacitador": "Estefania Cazares",
+          "idDelCurso": "equiposAgiles", 
+          "fotoDelCapacitador": "https://firebasestorage.googleapis.com/v0/b/verkel-platform.appspot.com/o/ImagenesCapacitadores%2FCapacitadorDePrueba.jpg?alt=media&token=02854572-2af6-418f-9b6f-be5e5f8be4d4",
+          "link": "/cursos/GestionDeProyectos"
+        },
+        {
+          "titulo": "Liderazgo Agil",
+          "description": "Lorem Ipsum la dasd difuse and lazer ipstrusm",
+          "image": "gs://verkel-platform.appspot.com/ImagenesParaLosCursos/RecursosHumanosCategoria.jpg",
+          "capacitador": "Estefania Cazares",
+          "idDelCurso": "norma035",
+          "fotoDelCapacitador": "https://firebasestorage.googleapis.com/v0/b/verkel-platform.appspot.com/o/ImagenesCapacitadores%2FCapacitadorDePrueba.jpg?alt=media&token=02854572-2af6-418f-9b6f-be5e5f8be4d4",
+          "link": "/cursos/LiderazgoAgil"
+        },
+        {
+          "titulo": "Norma 035",
+          "description": "Lorem Ipsum la dasd difuse and lazer ipstrusm",
+          "image": "gs://verkel-platform.appspot.com/ImagenesParaLosCursos/Norma035Miniatura.jpg",
+          "capacitador": "Estefania Cazares",
+          "idDelCurso": "equiposAgiles",
+          "fotoDelCapacitador": "https://firebasestorage.googleapis.com/v0/b/verkel-platform.appspot.com/o/ImagenesCapacitadores%2FCapacitadorDePrueba.jpg?alt=media&token=02854572-2af6-418f-9b6f-be5e5f8be4d4",
+          "link": "/cursos/norma035"
+        }
+],
+"articulosDestacados": [
+        {
+          "titulo": "Tiempos Dificiles",
+          "description": "Lorem Ipsum la dasd difuse and lazer ipstrusm Ipsum la dasd difuse and lazer ipstrusm Ipsum la dasd difuse and lazer ipstrusm" ,
+          "image": "gs://verkel-platform.appspot.com/ImagenesBlog/post1.jpg",
+          "autor": "Estefania Cazares",
+          "fotoDelAutor": "https://firebasestorage.googleapis.com/v0/b/verkel-platform.appspot.com/o/ImagenesCapacitadores%2FCapacitadorDePrueba.jpg?alt=media&token=02854572-2af6-418f-9b6f-be5e5f8be4d4",
+          "idDelArticulo": "norma035"
+        },
+        {
+          "titulo": "Adquiere Mas",
+          "description": "Lorem Ipsum la dasd difuse and lazer ipstrusm" ,
+          "image": "https://firebasestorage.googleapis.com/v0/b/verkel-platform.appspot.com/o/ImagenesBlog%2Fpost3.jpg?alt=media&token=21694d3c-2ed7-4f98-b630-bc0a444310ec",
+          "autor": "Estefania Cazares",
+          "fotoDelAutor": "https://firebasestorage.googleapis.com/v0/b/verkel-platform.appspot.com/o/ImagenesCapacitadores%2FCapacitadorDePrueba.jpg?alt=media&token=02854572-2af6-418f-9b6f-be5e5f8be4d4",
+          "idDelArticulo": "norma035"
+        },
+        {
+          "titulo": "Sobre Leer",
+          "description": "Lorem Ipsum la dasd difuse and lazer ipstrusm",
+          "image": "https://firebasestorage.googleapis.com/v0/b/verkel-platform.appspot.com/o/ImagenesBlog%2Fpost2.jpg?alt=media&token=0e515457-dcb2-4ab1-ba5a-9a90de6b7d43",
+          "autor": "Estefania Cazares",
+          "fotoDelAutor": "https://firebasestorage.googleapis.com/v0/b/verkel-platform.appspot.com/o/ImagenesCapacitadores%2FCapacitadorDePrueba.jpg?alt=media&token=02854572-2af6-418f-9b6f-be5e5f8be4d4",
+          "idDelArticulo": "norma035"
+        }
+        
+],
+"profesionesDestacadas": [
+        {
+          "titulo": "Recursos Humanos",
+          "description": "Lorem Ipsum la dasd difuse and lazer ipstrusm Ipsum la dasd difuse and lazer ipstrusm Ipsum la dasd difuse and lazer ipstrusm" ,
+          "image": "https://firebasestorage.googleapis.com/v0/b/verkel-platform.appspot.com/o/ProfesionesDestacadas%2FImagenMini.jpg?alt=media&token=61e75b37-bfc4-4612-b473-eeadf28e65c1",
+          "categoria": "Recursos Humanos",
+          "avatarDeLaProfesion": "https://firebasestorage.googleapis.com/v0/b/verkel-platform.appspot.com/o/Avatares%2FEquiposAgiles3.jpg?alt=media&token=d957cf69-b361-48e5-9461-d0508ed41b18"
+        },
+        {
+          "titulo": "Equipos Agiles",
+          "description": "Lorem Ipsum la dasd difuse and lazer ipstrusm" ,
+          "image": "https://firebasestorage.googleapis.com/v0/b/verkel-platform.appspot.com/o/ProfesionesDestacadas%2FMiniaturaEquiposAgiles.jpg?alt=media&token=302f823a-c114-40f9-a5d9-633637e82054",
+          "categoria": "Recursos Humanos",
+          "avatarDeLaProfesion": "https://firebasestorage.googleapis.com/v0/b/verkel-platform.appspot.com/o/Avatares%2FRecursosHumanosCategoria.jpg?alt=media&token=f8c5cf01-7136-4dc0-afd1-1533fe2b2246"
+        },
+        {
+          "titulo": "Lorem Ipsum",
+          "description": "Lorem Ipsum la dasd difuse and lazer ipstrusm",
+          "image": "https://firebasestorage.googleapis.com/v0/b/verkel-platform.appspot.com/o/ProfesionesDestacadas%2FRandom1.jpg?alt=media&token=8ac4752b-0bb8-423f-8aa2-943eec2a9b2e",
+          "categoria": "Recursos Humanos",
+          "avatarDeLaProfesion": "https://firebasestorage.googleapis.com/v0/b/verkel-platform.appspot.com/o/Avatares%2FRecursosHumanosCategoria.jpg?alt=media&token=f8c5cf01-7136-4dc0-afd1-1533fe2b2246"
+        },
+        {
+          "titulo": "Ipsum Lorem",
+          "description": "Lorem Ipsum la dasd difuse and lazer ipstrusm",
+          "image": "https://firebasestorage.googleapis.com/v0/b/verkel-platform.appspot.com/o/ProfesionesDestacadas%2FImagenMini2.jpg?alt=media&token=b794287d-7524-4455-8645-6a49c1cf07be",
+          "categoria": "Recursos Humanos",
+          "avatarDeLaProfesion": "https://firebasestorage.googleapis.com/v0/b/verkel-platform.appspot.com/o/Avatares%2FEquiposAgiles3.jpg?alt=media&token=d957cf69-b361-48e5-9461-d0508ed41b18"
+        }
+]
+}

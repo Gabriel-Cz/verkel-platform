@@ -19,9 +19,9 @@
               cols="12" md="7" lg="5"
               class="d-flex flex-column justify-center"
             >
-                <p class="profesionalesTexto text-center">Profesionales de Verkel</p>
+                <p class="profesionalesTexto text-center text-h5">Profesionales de Verkel</p>
                 <div>
-                    <p class="profesionalesDescripcion pa-10 pt-5 text-center">
+                    <p class="profesionalesDescripcion pa-5 pa-md-10 pt-5 text-center text-caption">
                         Los capacitadores de Verkel, son profesionistas certificados en diversas áreas de especialización, que otorgan cursos de alta fidelidad y con simplicidad en cada materia que se imparte, 
                         todo esto mediante recursos pedagogicos y andragógicos  que lleven al usuario por un camino práctico y de inmediata aplicación.
                     </p>
@@ -34,12 +34,12 @@
                   class="py-2"
                   color="#5e949f"
                 >
-                    Aprende sobre los Profesionales de Verkel
+                    Profesionales de Verkel
                 </v-btn>
                  </div>
             </v-col>
             <v-col
-              class="d-flex justify-start ml-md-16 pl-md-3"
+              class="d-flex justify-start ml-md-16 pl-md-3 mt-5 mt-md-0"
               cols="12" sm="10" md="5" lg="5"
             >
                <v-img src="ImagenProfesionales.png"></v-img>
@@ -71,7 +71,6 @@ export default {
 
 .profesionalesDescripcion{
   font-family: 'Roboto', sans-serif;
-  font-size: 18px;
   color: #808080;
 }
 

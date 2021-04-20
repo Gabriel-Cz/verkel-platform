@@ -1,11 +1,11 @@
 <template>
     <div>
-        <v-row class="headerRow mt-16">
+        <v-row :id="height" class="headerRow mt-16">
             <v-col cols="12" class="d-flex">
                 <div class="headerDiv">
-                    <p class="headerText d-flex ml-16 mt-2">Explora en Nuestros Cursos</p>
+                    <p class="headerText d-flex ma-2 text-center text-md-left ml-md-16 mt-2 text-h4 text-md-h3">Explora en Nuestros Cursos</p>
                     
-                        <p class="d-flex ml-16 headerDescriptionText pl-3">
+                        <p class="d-flex mt-10 ml-md-16 headerDescriptionText text-sm-left text-center text-md-left pl-sm-3 pl-md-2 text-body-1">
                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod 
                              <br/>
                              tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
@@ -31,29 +31,37 @@ export default {
                 image: "EngranesParaEA.jpg"
             }
         }
-    }
+    },
+    computed: {
+        height() {
+            switch (this.$vuetify.breakpoint.name) {
+                case 'xs': return "heightXs";
+                case 'sm': return "heightXs";
+                case 'md': return "heightMd";
+                case 'lg': return "heightMd";
+                case 'xl': return "heightMd";
+            }
+        }
+    } 
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
- .headerText{
-     font-size: 4.4rem;
-     font-weight: 300; 
-     font-family: 'Raleway';
-     color: #818181;
+ .headerText {
+    font: 'Roboto', sans-serif
  }
 
- .headerDescriptionText{
-    color: #616060;
-    font-family: 'Raleway';
-    font-weight: 400;
-    font-size: 1.5rem;
- }
+#heightXs {
+    height: 275px;
+}
 
- .headerRow{
-     background-image: url('/TheHeaderSvg.svg');
-     height: 400px;
+#heightMd {
+    height: 400px;
+}
+
+ .headerRow {
+    background-image: url('/TheHeaderSvg.svg');
  }
 
 </style>
