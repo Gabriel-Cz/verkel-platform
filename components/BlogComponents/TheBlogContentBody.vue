@@ -1,5 +1,5 @@
 <template>
-  <div style="background-image: url('/SvgBlogBackground.svg')">
+  <div>
       <v-row justify="center" class="mt-16">
           <v-col 
             v-for="articulo in articulosDestacados"

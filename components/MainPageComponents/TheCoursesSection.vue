@@ -1,5 +1,5 @@
 <template>
-    <v-container fluid class="mt-16 mainContainerCoursesSection">
+    <v-container fluid class="mt-md-16 mainContainerCoursesSection">
         <v-row class="mt-16 d-flex justify-center">
             <v-col 
               cols="12"
@@ -15,7 +15,7 @@
                     :key="curso.name"
                   >  
                     <TheCourseCardModel 
-                      :idDelCurso="curso.id"
+                      :idDelCurso="curso._id"
                       :imagenDelCurso="curso.imagen"
                       :nombreDelCurso="curso.titulo"
                       :descripcionDelCurso="curso.descripcion"
@@ -102,7 +102,7 @@ export default {
     created() {
       this.getTopPosts(),
       this.getTopProfesions(),
-      this.getTopCourses()
+      this.getCourses()
     },
     computed: {
       ...mapState('profesions', {
@@ -112,13 +112,13 @@ export default {
         articulosDestacados: state => state.topPosts
       }),
       ...mapState('courses', {
-        cursosDestacados: state => state.topCourses
+        cursosDestacados: state => state.courses
       })
     },
     methods: {
       ...mapActions('profesions', ['getTopProfesions']),
       ...mapActions('posts', ['getTopPosts']),
-      ...mapActions('courses', ['getTopCourses'])
+      ...mapActions('courses', ['getCourses'])
     },
 }
 </script>

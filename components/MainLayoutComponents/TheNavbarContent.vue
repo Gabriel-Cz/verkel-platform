@@ -1,27 +1,27 @@
 <template>
-        <v-row class="ma-4">
+        <v-row class="pt-5 pb-5">
             <v-col
-              cols="6" md="4" sm="3" lg="3"
-              class="d-flex justify-start"
+              cols="6" sm="5" md="2" lg="4"
+              class="d-flex align-start justify-start"
             >
           
-              <v-toolbar-title class="cardTitle">
-                <v-img 
-                  src="/Logos/verkel-logo.svg" 
-                  width="190" 
-                  height="50"
-                >
-                </v-img>
+              <v-toolbar-title class="pa-2">
+                <nuxt-link to="/">
+                  <v-img 
+                    src="/Logos/verkel-logo.svg" 
+                  >
+                  </v-img>
+                </nuxt-link>
               </v-toolbar-title>
             
             </v-col>
             <v-col
-              cols="6" md="4" sm="3" lg="5"
-              class="d-flex justify-center align-center mt-4"
+              cols="6" md="5" sm="5" lg="4"
+              class="d-flex justify-center align-center"
             >
               
                 <v-btn small v-for="btn in btns" :key="btn.name" 
-                  class="ma-10 mt-0 mb-0 menuBtns"
+                  class="ma-10 mt-5 mb-5 menuBtns"
                   elevation="0"
                   text
                   tile
@@ -33,7 +33,7 @@
                 
             </v-col>
             <v-col
-              cols="6" md="4" sm="3" lg="4"
+              cols="6" md="5" sm="2" lg="4"
               class="d-flex justify-center align-center"
             >
                 <v-btn
@@ -138,7 +138,7 @@ export default {
             {
                 key: 'tres',
                 name: 'Para Empresas',
-                pagina: '/'
+                pagina: '/empresas'
             },
         ],
         'modal' : false,

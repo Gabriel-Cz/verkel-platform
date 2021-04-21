@@ -144,6 +144,7 @@ import TheCourseInfoModel from '@/components/TheCourseInfoModel';
 import TheProfesionCardModel from '@/components/TheProfesionCardModel';
 import TheCourseCardModel from '@/components/TheCourseCardModel';
 import TheEspecializationCardModel from '@/components/TheEspecializationCardModel';
+import { mapState, mapActions } from 'vuex';
 
 export default {
     name: "TheCoursesPageMainContainer",
@@ -178,82 +179,28 @@ export default {
                     name: "Especializaciones",
                 }
             ],
-            profesiones: [
-                {
-                    titulo: "Recursos Humanos",
-                    imagen: "",
-                    link: "",
-                    categoria: "Recursos Humanos",
-                    avatar: "",
-                },
-                {
-                    titulo: "Gestion de Equipos",
-                    imagen: "MiniaturaEquiposAgiles.jpg",
-                    link: "",
-                    categoria: "Metodologia Agil",
-                    avatar: "CapacitadorDePrueba.jpg",
-                },
-                {
-                    titulo: "Recursos Humanos",
-                    imagen: "",
-                    link: "",
-                    categoria: "Recursos Humanos",
-                    avatar: "",
-                },
-                {
-                    titulo: "Equipos Agiles",
-                    imagen: "MiniaturaEquiposAgiles.jpg",
-                    link: "",
-                    categoria: "Metodologia Agil",
-                    avatar: "",
-                }
-            ],
-            cursos: [
-                {
-                    titulo: "Liderazgo Agil",
-                    imagen: "/LiderazgoAgilMiniatura.jpg",
-                    link: "",
-                    capacitador: "Estefania Cazares",
-                    avatar: "",
-                },
-                {
-                    titulo: "Norma-035",
-                    imagen: "/CoursesPageImages/Norma035Miniatura.jpg",
-                    link: "",
-                    capacitador: "Estefania Cazares",
-                    avatar: "",
-                    link: "/cursos/norma035",
-                },
-                {
-                    titulo: "Scrum",
-                    imagen: "/CoursesPageImages/ScrumMiniatura.jpg",
-                    link: "",
-                    capacitador: "Estefania Cazares",
-                    avatar: "",
-                },
-                {
-                    titulo: "Nomina Integral",
-                    imagen: "/CoursesPageImages/NominaIntegralMiniatura.jpg",
-                    link: "",
-                    capacitador: "Estefania Cazares",
-                    avatar: "",
-                }
-            ],
-            especializaciones: [
-                {
-                    titulo: "Nomina Integral",
-                    imagen: "/CoursesPageImages/NominaIntegralMiniatura.jpg",
-                    link: "",
-                    institucion: "Universidad Autonoma",
-                },
-                {
-                    titulo: "Metodologia Agil",
-                    imagen: "/MetodologiaAgil.jpg",
-                    link: "",
-                    institucion: "Universidad Autonoma",
-                }
-            ]
         }
+    },
+    computed: {
+      ...mapState('masters', {
+        especializaciones: state =>  state.masters
+      }),
+      ...mapState('profesions', {
+        profesiones: state =>  state.profesions
+      }),
+      ...mapState('courses', {
+        cursos: state =>  state.courses
+      })
+    },
+    methods: {
+      ...mapActions('profesions', ['getProfesions']),
+      ...mapActions('institutions', ['getMasters']),
+      ...mapActions('courses', ['getCourses']),
+    },
+    created() {
+      this.getProfesions(),
+      this.getMasters(),
+      this.getCourses()
     }
 }
 </script>

@@ -1,30 +1,18 @@
 <<template>
     <div>
         <v-card
+          id="card"
           color="transparent"
           style="cursor: pointer;"
           rounded
         >
-            <v-card-title
-              style="background-color: #E0E0E0;"
-              class="text-center cardTitle justify-center mb-2 " 
-            >
-                {{ tituloDelArticulo }}
-            </v-card-title>
             <v-img  
-              gradient="rgba(230, 230, 230, 0.8), rgba(230, 230, 230, 0.8)"
               :src="imagenDelArticulo" 
               height="170"
             >
-                <v-row class="justify-center">
-                    <v-col cols="10">
-                        <p
-                          class="cardDescription pt-4 pa-2 pl-1 pr-1 text-center text-body-2"
-                        >
-                            {{ descripcionDelArticulo }}
-                        </p>
-                    </v-col>
-                </v-row>
+            <div class="pa-4 text-h6 font-weight-regular divTitle">
+                {{ tituloDelArticulo }}
+            </div>
             </v-img>
         </v-card>
     </div>
@@ -32,54 +20,31 @@
 
 <script>
 
-import firestore from 'firebase/firestore';
-
     export default {
         name: "ThePostCardModel",
         props: {
             idDelArticulo: String,
             tituloDelArticulo: String,
-            descripcionDelArticulo: String,
             autorDelArticulo: String,
             imagenDelArticulo: String,
             avatarDelAutor: String,
         },
-        /* created() {
-            this.obtenerArticulo();
-        },
-        methods: {
-            async obtenerArticulo() {
-                let blogRef = this.$fire.firestore.collection('blog').doc(this.$props.idDelArticulo);
-                try {
-                    const snapshot = await blogRef.get()
-                    const doc = snapshot.data();
-                    if (!doc) {
-                        alert('Este Articulo ya no existe...');
-                        return
-                    }
-                    this.tituloDelArticulo = doc.titulo;
-                    this.descripcionDelArticulo = doc.descripcion;
-                    this.imagenDelArticulo = doc.imagen;
-                    this.autorDelArticulo = doc.autor;
-                    this.avatarDelAutor = doc.avatar;
-                } catch(e) {
-                    alert('error' + e);
-                }
-            }
-        } */
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
-.cardTitle{
-    font-family: 'Lora', sans-serif ;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+#card {
+    position: relative;
 }
 
-.cardDescription{
-    font-family: 'Roboto', sans-serif ;
-    font-style: italic;
+.divTitle {
+    width: 100%;
+    font-family: 'Latee', sans-serif;
+    backdrop-filter: blur(2.5px);
+    background-color: rgba($color: white, $alpha: 0.75);
+    position: absolute;
+    bottom: 0;
 }
 
 </style>

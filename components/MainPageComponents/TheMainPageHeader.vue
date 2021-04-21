@@ -21,7 +21,6 @@
               Desarolla conocimiento agil con la primera plataforma de capacitacion profesional de America Latina.</p> 
               <v-btn 
                 class="divOverflowBtn blue --darken-2" 
-                nuxt-link to="sobre-verkel"
                 large
               >
                   Descubre Verkel

@@ -5,7 +5,14 @@
     >
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 
-      <v-toolbar-title>Title</v-toolbar-title>
+      <v-toolbar-title>
+        <nuxt-link to="/">
+          <v-img 
+            src="/Logos/verkel-logo.svg" 
+          >
+          </v-img>
+        </nuxt-link>
+      </v-toolbar-title>
     </v-app-bar>
 
     <v-navigation-drawer

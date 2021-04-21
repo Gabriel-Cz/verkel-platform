@@ -1,12 +1,13 @@
 <template>
-    <div>
-        <v-row class="mt-16 theRowOfBuyComponent">
+    <div class="pb-16">
+        <v-card color="transparent" elevation="20" :width="cardHeight" class="container mt-5 mt-lg-16">
+          <v-row class="mt-0 theRowOfBuyComponent justify-center">
             <v-col 
-              cols="6"
+              cols="12" lg="6" xl="5"
               class="d-flex justify-center"  
             >
                 <v-card
-                class="pa-16"
+                class="pa-lg-16"
                 width="500"
                 elevation="0"
                 color="transparent"
@@ -14,89 +15,76 @@
                 <span class="ribbon5 mt-10">Adquiere el curso de por vida por $***</span>
                     <v-img 
                       class="img"
-                      src="../cursos/norma035.jpg"
-                      height="350"
+                      :src="imagenDelCurso"
+                      :height="imageHeight"
                     >                       
                     </v-img>
                     <v-card-actions class="d-flex justify-end">
-                    <v-btn 
-                      style="margin-top: -35px; margin-right: -64px;"
+                    <v-btn  
+                      class="pa-4 buyBtn ml-n9 ml-md-n16 mt-n7 mt-md-n9"
+                      color="#FFEA00"
+                      dark
                       large
-                      class="pa-4 buyBtn"
                     >   Comprar Ahora
                     </v-btn>
                 </v-card-actions>
                 </v-card>
             </v-col>
             <v-col 
-              cols="6"
+              cols="12" xl="5"
             >
-              <v-row class="">
+              <v-row class="mt-xl-5 text-center text-lg-left">
                   <v-col 
                     cols="12"
                   >
                     <p class=" mt-4 listTitle">¿Que Habilidades requiero para aprender correctamente en este curso?</p>  
                     <v-card 
-                      class="mr-16 cardListRequirementsWrapper"
+                      class="cardListRequirementsWrapper"
                       elevation="0" 
+                      color="transparent"
                     >
                       <v-card-text>
-                        <v-row class="listRequirements">
-                          <v-col cols="3">
-                              <ul>
+                        <v-row justify="center">
+                          <v-col cols="6" sm="4">
+                              <ul class="listSkillsNeeded">
                                 <li 
                                   v-for="i in 3" :key="i"
-                                  class="pa-3"
+                                  class="py-2"
                                 > Lorem Ipsum </li>
                               </ul>
                           </v-col>
-                          <v-col cols="3">
-                              <ul>
-                                <li 
-                                  v-for="i in 3" :key="i"
-                                  class="pa-3"
-                                > Lorem Ipsum </li>
-                              </ul>
-                          </v-col>
-                          <v-col cols="3">
-                              <ul>
+                          <v-col cols="6" sm="4">
+                              <ul class="listSkillsNeeded">
                                 <li 
                                   v-for="i in 2" :key="i"
-                                  class="pa-3"
+                                  class="py-2"
                                 > Lorem Ipsum </li>
                               </ul>
                           </v-col>
                         </v-row>
                       </v-card-text> 
                     </v-card>
-                    <p class="mt-8 listTitle">¿Que Habilidades nuevas Aprenderas con este curso?</p>  
+                    <p class="mt-6 mt-md-8 listTitle">¿Que Habilidades nuevas Aprenderas con este curso?</p>  
                     <v-card 
-                      class="mr-16 mt-4 cardListNewSkillsWrapper"
+                      class="mt-4 cardListNewSkillsWrapper"
                       elevation="0"
+                      color="transparent"
                     >
                       <v-card-text>
-                        <v-row class="listNewSkills">
-                          <v-col cols="3">
-                            <ul>
+                        <v-row justify="center">
+                          <v-col cols="6" sm="4">
+                            <ul class="listNewSkills">
                                 <li 
                                   v-for="i in 3" :key="i"
-                                  class="pa-3"
+                                  class="py-2"
                                 > Lorem Ipsum </li>
                               </ul>
                           </v-col>
-                          <v-col cols="3">
-                            <ul>
+                          <v-col cols="6" sm="4">
+                            <ul class="listNewSkills">
                                 <li 
-                                  v-for="i in 3" :key="i"
-                                  class="pa-3"
-                                > Lorem Ipsum </li>
-                              </ul>
-                          </v-col>
-                          <v-col cols="3">
-                            <ul>
-                                <li 
-                                  v-for="i in 3" :key="i"
-                                  class="pa-3"
+                                  v-for="i in 2" :key="i"
+                                  class="py-2"
                                 > Lorem Ipsum </li>
                               </ul>
                           </v-col>
@@ -107,16 +95,29 @@
               </v-row>
             </v-col>
         </v-row>
+        </v-card>
     </div>
 </template>
 
 <script>
 export default {
     name: "TheBuyCourseComponent",
-    data () {
-      return {
-        curso: {
-          cursoNombre: ""
+    props: {
+      imagenDelCurso: String
+    },
+    computed: {
+      cardHeight() {
+        switch(this.$vuetify.breakpoint.name) {
+          case 'xs': return '100%';
+          case 'sm': return '90%';
+          default: return '75%';
+        }
+      },
+      imageHeight() {
+        switch (this.$vuetify.breakpoint.name) {
+          case 'xs': return 250;
+          case 'sm': return 250;
+          default: return 350;
         }
       }
     }
@@ -125,8 +126,8 @@ export default {
 
 <style scoped>
 
-.theRowOfBuyComponent{
-  background-color: rgba(128, 128, 128, 0.2);
+.container {
+  border: 1px solid gray;
 }
 
 .ribbon5 {
@@ -138,7 +139,7 @@ export default {
   margin-left: -10px;
   margin-right: -10px;
   margin-bottom: -50px;
-  background: #EDBA19;
+  background: #FDD835;
   position: relative;
   z-index: 1;
   top: 20px;
@@ -175,41 +176,36 @@ export default {
   }
 }
 
-.buyBtn{
-  background-image: linear-gradient(265.88deg, #6FA2D1 1.18%, #88ADD0 47.83%, #9CC6EE 95.49%);
-  border: rgba(128, 128, 128, 0.2) 1px solid;
-  color: floralwhite;
-}
-
 .img{
   background-size: cover;
   position: relative;
   box-shadow: -5px 5px 2px rgba(128, 128, 128, 0.5);
 }
 
-.listRequerimentsContent{
-  color: #3EA7F3;
+.listNewSkills {
+  list-style: none; 
 }
 
-.listNewSkills{
-  color: #3EA7F3;
+.listNewSkills li::before {
+  content: "\2022";
+  color: #9CCC65;
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
 }
 
-.listRequirements{
-  color: #cd8d11;
+.listSkillsNeeded {
+  list-style: none;
 }
 
-.cardListRequirementsWrapper{
-  border: 1px solid #cd8d11;
-  background-color: transparent;
+.listSkillsNeeded li::before {
+  content: "\2022";
+  color: #039BE5;
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
 }
 
-.cardListNewSkillsWrapper{
-  border: 1px solid #3EA7F3;
-  background-color: transparent;
-}
-
-.listTitle{
-  color: rgba(128, 128, 128, 0.9);
-}
 </style>

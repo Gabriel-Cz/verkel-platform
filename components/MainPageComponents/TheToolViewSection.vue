@@ -15,20 +15,16 @@
                         <v-col cols="11" md="6"
                           class="mt-10 ml-lg-0 pb-md-16 text-center text-md-left"
                         >
-                            <p class="afiliadosDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. 
+                            <p class="afiliadosDescription text-caption text-md-subtitle-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. 
                                 Ut enim ad minim veniam, 
                                 quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure
                             </p>
                         </v-col>
                         <v-col cols="5" md="5" class="d-flex justify-center">
-                            <v-img 
-                              max-width="300"
-                              class="mt-lg-16 mb-16"
-                              max-height="300"
-                              src="verkelAfiliados.png"></v-img>
+                            <div class="divSvgVerkelAfiliados"></div>
                         </v-col>
                     </v-row>
-                    <v-row class="divCard ml-2 mr-2 ml-lg-16 mr-lg-16 mt-5 mt-md-9 d-flex justify-center">
+                    <v-row class="divCard ml-2 mr-2 ml-lg-16 mr-lg-16 mt-md-9 d-flex justify-center">
                         <v-col 
                           cols="12"
                           class="d-flex justify-center">
@@ -39,7 +35,7 @@
                         <v-col cols="10" md="8" lg="6"
                           class="mt-10 mt-lg-10 ml-lg-10 pb-lg-16 d-flex flex-column justify-center"
                         >
-                            <p class="afiliadosDescription text-center text-lg-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            <p class="afiliadosDescription text-center text-lg-left text-caption text-md-subtitle-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                                 sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
                             </p>
                             <div class="d-flex justify-center">
@@ -48,7 +44,7 @@
                               small
                               outlined
                               color="#5e949f"
-                              class="d-flex justify-self-center mt-7 mb-5"
+                              class="d-flex justify-self-center mt-7 mb-5 mb-sm-0"
                             >
                                Afiliate Ahora
                             </v-btn>
@@ -75,10 +71,6 @@ export default {
 <style scoped>
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-.containerOfToolSection{
-    border-bottom: ridge 0.2px rgba(0, 0, 0, 0.2);
-}
 
 .OverlayDiv{
     width: 750px;
@@ -131,34 +123,6 @@ export default {
     font-family: 'Roboto';
 }
 
-
-
-
-.customShape{
-    transform: rotate(90deg);
-    height: 150px;
-}
-
-.custom-shape-divider-top-1602172901 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.custom-shape-divider-top-1602172901 svg {
-    position: relative;
-    display: block;
-    width: calc(153% + 1.3px);
-    height: 158px;
-}
-
-.custom-shape-divider-top-1602172901 .shape-fill {
-    fill: #FFFFFF;
-}
-
 .divCard{
     border-radius: 5px;
     border: solid 1px rgba(0, 0, 0, 0.5);
@@ -189,8 +153,14 @@ export default {
     border: 0.5px solid #b4b4b46e;
 }
 
+.divSvgVerkelAfiliados {
+    background-image: url('/VerkelAfiliados.svg');
+    height: 100%;
+    width: 100%;
+    border: solid;
+}
+
 .afiliadosDescription{
-    font-size: 1.8vh;
     font-family: 'Intern', sans-serif;
 }
 

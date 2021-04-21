@@ -2,15 +2,19 @@
   <v-app>
       <v-app-bar
         style="border-bottom: 1px ridge black;"
-        flat
         id="TheAppBar"
         color="white"
+        :flat="$route.path === '/' ? true : false"
         v-show="navbar"
+        height="75"
       >
         <TheNavbarContent></TheNavbarContent>  
       </v-app-bar>
       <TheMobileNavbar v-show="mobileNavbar" />
-      <v-main>
+      <v-main
+        id="contentContainer"
+        class="overflow-y-auto" 
+      >
 
         <v-container fluid>
           <nuxt />
@@ -26,10 +30,6 @@
       >
         <TheFooterContent></TheFooterContent>
       </v-footer>
-
-      <v-bottom-navigation style="background-color: rgba(0,0,0,0.2)" id="TheBottomNav">
-        <TheBottomNavigationContent></TheBottomNavigationContent>
-      </v-bottom-navigation>
     </v-app>
 </template>
 
@@ -75,12 +75,6 @@ export default {
 #TheAppBar{
   z-index: 1;
 }
-
-#TheFooter {
-  box-shadow: 0px -1px 0px #989696;
-}
-
-
 
 .theme--light.v-application{
   background-image: linear-gradient(to left, var(--v-firstbackground-base), var(--v-secondbackground-base)) !important;;

@@ -1,23 +1,21 @@
 import axios from 'axios' 
 
 export const state = () => ({
-    topProfesions: []
+    profesions: []
 })
 
 export const mutations = {
-    setTopProfesions(state, payload) {
-        state.topProfesions = payload;
+    setProfesions(state, payload) {
+        state.profesions = payload;
     }
 }
 
 export const actions = {
-    async getTopProfesions({commit}, profesions) {
-        await axios.get('https://verkel-platform-default-rtdb.firebaseio.com/profesionesDestacadas.json')
+    async getProfesions({commit}, profesions) {
+        await axios.get('https://verkel-platform-default-rtdb.firebaseio.com/profesiones.json')
         .then(res => {
             profesions = res.data
-            console.log(profesions);
-            commit('setTopProfesions', profesions);
+            commit('setProfesions', profesions)
         })
-        .catch(e => console.log(e))
     }
 }

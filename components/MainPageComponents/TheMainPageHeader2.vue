@@ -10,20 +10,27 @@
             <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shapeWhite"></path>
           </svg> 
         </div>
-        <v-row class="d-flex justify-center mt-lg-16 pb-16"> 
+        <v-row class="d-flex justify-center mt-lg-5 mt-xl-16 pb-16"> 
             <v-col v-show="notShowDecorativeCol" cols="1" sm="0" md="1" lg="2"></v-col>
             <v-col cols="11" sm="10" md="10" lg="8" class="d-flex justify-center">
                 <div class="text-center divOverlay">
-                    <h1 class="pa-4 mt-2 mt-sm-5 pb-0 white--text text-body-1 text-md-h4 font-md-weight-bold">Bienvenido a Verkel <br /> Plataforma de Capacitacion #1 de Mexico.</h1>
-                    <p v-show="notShowInMobile" class="mt-0 mt-sm-8 pa-4 pb-0 pt-0 pa-md-16 pb-md-0 pt-md-0 text-caption white--text text-md-body-1">Lorem Ipsum Dolor asitem asimet lorem ipsum dolom asimet ipsum asimet lorem ipsum dolem asim.
+                    <h1 class="pa-4 mt-2 mt-sm-5 pb-0 white--text text-body-1 text-md-h4 font-weight-bold">Bienvenido a Verkel <br /> Plataforma de Capacitacion #1 de Mexico.</h1>
+                    <p v-show="notShowInMobile" class="mt-0 mt-sm-8 pa-4 pb-0 pt-0 pa-md-16 mx-lg-16 pb-md-0 pt-md-0 text-caption white--text text-md-body-1">Lorem Ipsum Dolor asitem asimet lorem ipsum dolom asimet ipsum asimet lorem ipsum dolem asim.
                        Lorem Ipsum Dolor asitem asimet lorem ipsum dolom asimet ipsum asimet lorem ipsum dolem asim.
                     </p>
-                    <p v-show="notShowSmPlus" class="mt-8 pa-4 pb-0 pt-0 pa-md-16 pb-md-0 pt-md-0 font-weight-regular text-caption white--text text-md-body-1">
+                    <p v-show="notShowSmPlus" class="mt-8 font-weight-semi-bold pa-4 pb-0 pt-0 pa-md-16 pb-md-0 pt-md-0 font-weight-regular text-caption white--text text-md-body-1">
                        Lorem Ipsum Dolor asitem asimet lorem.
                        Lorem Ipsum Dolor asitem asimet lorem.
                        Lorem Ipsum Dolor asitem asimet lorem.
                     </p>
-                    <v-btn class="mt-5 mb-7 mt-md-10 mb-md-14" small dark color="light-blue accent-4">Descubre Mas Sobre Verkel</v-btn>
+                    <v-btn class="mt-5 mb-7 mt-md-10 mb-md-14" 
+                      :small="$vuetify.breakpoint.name === 'xs' ? true : false" 
+                      dark 
+                      color="light-blue accent-4"
+                      nuxt-link to="/about"
+                    >
+                        Descubre Mas Sobre Verkel
+                    </v-btn>
                 </div>
             </v-col>
             <v-col v-show="notShowDecorativeCol" cols="2" sm="0" md="1" lg="2"></v-col>              

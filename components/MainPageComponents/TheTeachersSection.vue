@@ -1,7 +1,7 @@
 <template>
     <div>
         <v-row 
-          class="mt-16 pt-16 svgRow" 
+          class="mt-md-16 pt-16 svgRow" 
           >
             <v-col 
               class="d-flex justify-end"
@@ -19,9 +19,9 @@
               cols="12" md="7" lg="5"
               class="d-flex flex-column justify-center"
             >
-                <p class="profesionalesTexto text-center text-h5">Profesionales de Verkel</p>
+                <p class="profesionalesTexto text-center px-md-10 text-md-left text-h5">Profesionales de Verkel</p>
                 <div>
-                    <p class="profesionalesDescripcion pa-5 pa-md-10 pt-5 text-center text-caption">
+                    <p class="profesionalesDescripcion px-5 px-md-10 mt-5 text-center text-md-left text-caption text-lg-subtitle-1">
                         Los capacitadores de Verkel, son profesionistas certificados en diversas áreas de especialización, que otorgan cursos de alta fidelidad y con simplicidad en cada materia que se imparte, 
                         todo esto mediante recursos pedagogicos y andragógicos  que lleven al usuario por un camino práctico y de inmediata aplicación.
                     </p>
@@ -31,7 +31,7 @@
                   rounded
                   outlined
                   small
-                  class="py-2"
+                  class="py-2 mt-2"
                   color="#5e949f"
                 >
                     Profesionales de Verkel
