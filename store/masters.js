@@ -6,16 +6,17 @@ export const state = () => ({
 
 export const mutations = {
     setMasters(state, payload) {
-        state.institutions = payload;
+        state.masters = payload;
     },
 }
 
 export const actions = {
     async getMasters({commit}, masters) {
-        await axios.get('https://verkel-platform-default-rtdb.firebaseio.com/instituciones.json')
+        await axios.get('https://verkel-platform-default-rtdb.firebaseio.com/especializaciones.json')
         .then(res => {
             masters = res.data;
-            commit('setInstitutions', masters)
+            console.log(res.data);
+            commit('setMasters', masters)
         })
         .catch(e => console.log(e))
     },

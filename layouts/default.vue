@@ -1,7 +1,6 @@
 <template>
   <v-app>
       <v-app-bar
-        style="border-bottom: 1px ridge black;"
         id="TheAppBar"
         color="white"
         :flat="$route.path === '/' ? true : false"

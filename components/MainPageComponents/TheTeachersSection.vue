@@ -16,7 +16,7 @@
           class="justify-center"
         >
             <v-col
-              cols="12" md="7" lg="5"
+              cols="12" sm="8" md="7" lg="5"
               class="d-flex flex-column justify-center"
             >
                 <p class="profesionalesTexto text-center px-md-10 text-md-left text-h5">Profesionales de Verkel</p>

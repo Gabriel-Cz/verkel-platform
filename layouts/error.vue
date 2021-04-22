@@ -6,9 +6,12 @@
     <h1 v-else>
       {{ otherError }}
     </h1>
-    <NuxtLink to="/">
-      Home page
-    </NuxtLink>
+    <v-container class="mx-auto">
+      <NuxtLink to="/">
+        Principla
+        <v-img src="/Logos/verkel-logo.svg"></v-img>
+      </NuxtLink>
+    </v-container>
   </v-app>
 </template>
 
@@ -23,8 +26,8 @@ export default {
   },
   data () {
     return {
-      pageNotFound: '404 Not Found',
-      otherError: 'An error occurred'
+      pageNotFound: '404 Not Encontrado',
+      otherError: 'Un error ha ocurrido'
     }
   },
   head () {

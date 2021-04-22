@@ -77,6 +77,7 @@
                       :nombreDelCurso="curso.titulo"
                       :capacitadorDelCurso="curso.capacitador"
                       :avatarDelCapacitador="curso.avatar"
+                      :descripcionDelCurso="curso.descripcion"
                     ></TheCourseCardModel>
                 </v-col>
                 <v-col cols="12" class="d-flex align-center justify-center mt-10">
@@ -194,7 +195,7 @@ export default {
     },
     methods: {
       ...mapActions('profesions', ['getProfesions']),
-      ...mapActions('institutions', ['getMasters']),
+      ...mapActions('masters', ['getMasters']),
       ...mapActions('courses', ['getCourses']),
     },
     created() {

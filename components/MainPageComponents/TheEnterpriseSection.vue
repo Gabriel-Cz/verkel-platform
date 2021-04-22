@@ -21,6 +21,7 @@
             rounded
             small
             color="#FFA726"
+            nuxt-link to="/about"
           >
             Consultar Planes
           </v-btn>

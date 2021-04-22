@@ -101,12 +101,12 @@ export default {
     },
     created() {
       this.getTopPosts(),
-      this.getTopProfesions(),
+      this.getProfesions(),
       this.getCourses()
     },
     computed: {
       ...mapState('profesions', {
-        profesionesDestacadas: state => state.topProfesions
+        profesionesDestacadas: state => state.profesions
       }),
       ...mapState('posts', {
         articulosDestacados: state => state.topPosts
@@ -116,7 +116,7 @@ export default {
       })
     },
     methods: {
-      ...mapActions('profesions', ['getTopProfesions']),
+      ...mapActions('profesions', ['getProfesions']),
       ...mapActions('posts', ['getTopPosts']),
       ...mapActions('courses', ['getCourses'])
     },

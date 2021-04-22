@@ -28,7 +28,6 @@ export const actions = {
         .then(res => {
             const DBcourse = res.data.find(course => course._id === id ? course : false);
             commit('setCourse', DBcourse)
-            console.log(DBcourse);
         })
         .catch(e => console.log(e))
     }

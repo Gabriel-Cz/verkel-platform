@@ -1,14 +1,16 @@
 <template>
   <div>
       <v-app-bar
-      color="transparent"
+        color="white"
+        :flat="$route.path === '/' ? true : false"
     >
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-
+      <v-spacer></v-spacer>
       <v-toolbar-title>
         <nuxt-link to="/">
           <v-img 
-            src="/Logos/verkel-logo.svg" 
+            src="/Logos/verkel-logo.svg"
+            width="40" 
           >
           </v-img>
         </nuxt-link>
@@ -19,6 +21,7 @@
       v-model="drawer"
       absolute
       temporary
+      height="200"
     >
       <v-list
         nav
@@ -56,19 +59,24 @@
                 group: null,
                 links: [
                     {
+                      key: 'cero',
+                      name: 'Principal',
+                      pagina: '/',
+                    },
+                    {
                       key: 'uno',
                       name: 'Blog',
-                      pagina: '/blog'
+                      pagina: '/blog',
                     },
                     {
                       key:  'dos',
                       name: 'Cursos',
-                      pagina: '/cursos'
+                      pagina: '/cursos',
                     },
                     {
                       key: 'tres',
                       name: 'Para Empresas',
-                      pagina: '/'
+                      pagina: '/',
                     },
                 ],
             }

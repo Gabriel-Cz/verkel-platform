@@ -5,7 +5,7 @@
               class="d-flex align-start justify-start"
             >
           
-              <v-toolbar-title class="pa-2">
+              <v-toolbar-title class="pa-2 mt-3">
                 <nuxt-link to="/">
                   <v-img 
                     src="/Logos/verkel-logo.svg" 
@@ -150,7 +150,7 @@ export default {
         this.modal = true;
         this.loginFormView = e;
       }
-    }
+    },
 }
 </script>
 

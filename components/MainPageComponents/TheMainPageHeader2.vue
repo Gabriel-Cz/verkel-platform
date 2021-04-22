@@ -14,7 +14,7 @@
             <v-col v-show="notShowDecorativeCol" cols="1" sm="0" md="1" lg="2"></v-col>
             <v-col cols="11" sm="10" md="10" lg="8" class="d-flex justify-center">
                 <div class="text-center divOverlay">
-                    <h1 class="pa-4 mt-2 mt-sm-5 pb-0 white--text text-body-1 text-md-h4 font-weight-bold">Bienvenido a Verkel <br /> Plataforma de Capacitacion #1 de Mexico.</h1>
+                    <h1 class="pa-4 mt-2 mt-sm-5 pb-0 white--text text-body-1 text-md-h4 font-weight-medium font-sm-weight-bold">Bienvenido a Verkel <br /> Plataforma de Capacitacion #1 de Mexico.</h1>
                     <p v-show="notShowInMobile" class="mt-0 mt-sm-8 pa-4 pb-0 pt-0 pa-md-16 mx-lg-16 pb-md-0 pt-md-0 text-caption white--text text-md-body-1">Lorem Ipsum Dolor asitem asimet lorem ipsum dolom asimet ipsum asimet lorem ipsum dolem asim.
                        Lorem Ipsum Dolor asitem asimet lorem ipsum dolom asimet ipsum asimet lorem ipsum dolem asim.
                     </p>
