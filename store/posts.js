@@ -26,8 +26,7 @@ export const actions = {
     async getPost({commit}, postId) {
         await axios.get('https://verkel-platform-default-rtdb.firebaseio.com/articulosDestacados.json')
         .then(res => {
-            const DBpost = res.data.find(post => post._id === 'a_adquieremas' ? post : false);
-            console.log(DBpost);
+            const DBpost = res.data.find(post => post._id === postId ? post : false);
             commit('setPost', DBpost)
         })
     }

@@ -31,7 +31,7 @@
                 </v-card>
             </v-col>
             <v-col 
-              cols="12" xl="5"
+              cols="12" lg="6" xl="5"
             >
               <v-row class="mt-xl-5 text-center text-lg-left">
                   <v-col 

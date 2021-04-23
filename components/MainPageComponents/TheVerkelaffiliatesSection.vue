@@ -13,7 +13,7 @@
                             </div>
                         </v-col>
                         <v-col cols="11" md="6"
-                          class="mt-10 ml-lg-0 pb-md-16 text-center text-md-left"
+                          class="mt-10 ml-lg-0 pb-0 pb-md-16 text-center text-md-left"
                           style="font-family: Latee;"
                         >
                             <p class="afiliadosDescription text-caption text-md-subtitle-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. 
@@ -22,20 +22,42 @@
                             </p>
                         </v-col>
                         <v-col cols="5" md="5" class="d-flex justify-center">
-                            <div>
-                                <svg width="113" height="66" viewBox="0 0 113 66" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16.0381 11.1698L31.7741 53.1698L48.0381 11.1698" stroke="black" stroke-width="2"/>
-<path d="M10.415 12.3019L26.151 54.3019L42.415 12.3019" stroke="black"/>
+                            <div class="svgWrapper">
+                                <svg width="100%" height="100%" viewBox="0 0 117 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.0381 11.1698L35.7741 53.1698L52.0381 11.1698" stroke="black" stroke-width="2"/>
+<path d="M14.415 12.3019L30.151 54.3019L46.415 12.3019" stroke="black"/>
 <g filter="url(#filter0_d)">
-<circle cx="29.0986" cy="56.7217" r="1.25" fill="black"/>
+<circle cx="33.0986" cy="56.7217" r="1.25" fill="black"/>
 </g>
-<circle cx="30" cy="30" r="29.5" stroke="black"/>
+<g filter="url(#filter1_d)">
+<circle cx="34" cy="30" r="29.5" stroke="black"/>
+</g>
 <g clip-path="url(#clip0)">
-<circle cx="83" cy="30" r="29.5" stroke="black"/>
-<path d="M83.4737 2.19644C83.3967 2.19644 83.324 2.21568 83.2513 2.21568C83.0246 2.20927 82.8 2.1943 82.5712 2.19644H83.4737ZM83.123 37.0009C83.0823 37.0009 83.046 36.9945 83.0053 36.9945C82.9754 36.9945 82.9476 37.0009 82.9177 37.0009H83.123ZM70.4022 24.1947C70.4343 24.1882 70.4578 24.154 70.4921 24.1455C72.5045 31.4276 77.7143 36.8769 83.0075 36.9924C87.828 36.77 93.7478 31.419 95.7197 24.1733C96.6264 24.2289 97.5332 23.1595 97.7877 21.671C98.0508 20.1184 97.499 18.7325 96.5644 18.5721C96.5045 18.5614 96.4425 18.5999 96.3848 18.6021C96.1132 6.61918 90.4201 2.39319 83.2513 2.21141C75.858 2.24776 69.2388 7.38481 69.658 18.6063C69.5874 18.6063 69.5211 18.5614 69.4527 18.5743C68.5138 18.7347 67.9663 20.1205 68.2294 21.6732C68.486 23.2216 69.4612 24.3508 70.4022 24.1947ZM92.9672 39.0733L86.2497 52.2175L85.1889 43.6693L86.8464 42.3091H82.83H79.1579L80.8175 43.6693L79.7546 52.2175L73.0456 39.0733C61.3771 40.6452 53 45.6454 53 57.8015H113C113.004 45.6432 104.629 40.6473 92.9672 39.0733Z" fill="black"/>
+<g filter="url(#filter2_d)">
+<circle cx="87" cy="30" r="29.5" stroke="black"/>
+</g>
+<path d="M87.4737 2.19644C87.3967 2.19644 87.324 2.21568 87.2513 2.21568C87.0246 2.20927 86.8 2.1943 86.5712 2.19644H87.4737ZM87.123 37.0009C87.0823 37.0009 87.046 36.9945 87.0053 36.9945C86.9754 36.9945 86.9476 37.0009 86.9177 37.0009H87.123ZM74.4022 24.1947C74.4343 24.1882 74.4578 24.154 74.4921 24.1455C76.5045 31.4276 81.7143 36.8769 87.0075 36.9924C91.828 36.77 97.7478 31.419 99.7197 24.1733C100.626 24.2289 101.533 23.1595 101.788 21.671C102.051 20.1184 101.499 18.7325 100.564 18.5721C100.505 18.5614 100.443 18.5999 100.385 18.6021C100.113 6.61918 94.4201 2.39319 87.2513 2.21141C79.858 2.24776 73.2388 7.38481 73.658 18.6063C73.5874 18.6063 73.5211 18.5614 73.4527 18.5743C72.5138 18.7347 71.9663 20.1205 72.2294 21.6732C72.486 23.2216 73.4612 24.3508 74.4022 24.1947ZM96.9672 39.0733L90.2497 52.2175L89.1889 43.6693L90.8464 42.3091H86.83H83.1579L84.8175 43.6693L83.7546 52.2175L77.0456 39.0733C65.3771 40.6452 57 45.6454 57 57.8015H117C117.004 45.6432 108.629 40.6473 96.9672 39.0733Z" fill="black"/>
 </g>
 <defs>
-<filter id="filter0_d" x="23.8486" y="55.4717" width="10.5" height="10.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_d" x="27.8486" y="55.4717" width="10.5" height="10.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+<filter id="filter1_d" x="0" y="0" width="68" height="68" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+<filter id="filter2_d" x="53" y="0" width="68" height="68" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
 <feOffset dy="4"/>
@@ -45,15 +67,14 @@
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
 </filter>
 <clipPath id="clip0">
-<rect width="60" height="60" fill="white" transform="translate(53)"/>
+<rect width="60" height="60" fill="white" transform="translate(57)"/>
 </clipPath>
 </defs>
 </svg>
-
                             </div>
                         </v-col>
                     </v-row>
-                    <v-row class="divCard ml-2 mr-2 ml-lg-16 mr-lg-16 mt-md-9 d-flex justify-center">
+                    <v-row class="divCard ml-2 mr-2 ml-lg-16 mr-lg-16 mt-md-9 mt-16 mt-sm-0 d-flex justify-center">
                         <v-col 
                           cols="12"
                           class="d-flex justify-center">
@@ -89,18 +110,11 @@
 
 <script>
 export default {
-    name: 'TheToolViewSection',
-    data () {
-        return {
-            //
-        }
-    }
+    name: 'TheVerkelAffiliatesSection',
 }
 </script>
 
 <style scoped>
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 .OverlayDiv{
     width: 750px;
@@ -138,8 +152,6 @@ export default {
 .TooViewImage{
     border-radius: 10px;
 }
-
-
 
 .leverageDiv{
     color: #494949;
@@ -186,6 +198,10 @@ export default {
     height: 100%;
     width: 100%;
     border: solid;
+}
+
+.svgWrapper {
+    height: 100%;
 }
 
 .afiliadosDescription{

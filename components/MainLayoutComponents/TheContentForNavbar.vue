@@ -16,7 +16,7 @@
             
             </v-col>
             <v-col
-              cols="6" md="5" sm="5" lg="4"
+              cols="6" sm="5" md="7" lg="4"
               class="d-flex justify-center align-center"
             >
               
@@ -33,7 +33,7 @@
                 
             </v-col>
             <v-col
-              cols="6" md="5" sm="2" lg="4"
+              cols="6" md="3" sm="2" lg="4"
               class="d-flex justify-center align-center"
             >
                 <v-btn

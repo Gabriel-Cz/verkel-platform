@@ -1,8 +1,7 @@
 <template>
     <div>
         <v-card
-          hover
-          nuxt-link :to="'/profesiones/' + `${idDeLaProfesion}`"
+          @click="window.alert('Profesiones en proceso de desarollo espera un poco mas.')"
           color="transparent" 
           style="font-family: Latee;">
             <v-card-title 

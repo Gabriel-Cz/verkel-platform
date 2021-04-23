@@ -15,7 +15,6 @@ export const actions = {
         await axios.get('https://verkel-platform-default-rtdb.firebaseio.com/especializaciones.json')
         .then(res => {
             masters = res.data;
-            console.log(res.data);
             commit('setMasters', masters)
         })
         .catch(e => console.log(e))

@@ -13,7 +13,8 @@
             <v-col 
               cols="12"
               md="8"
-              lg="5"
+              lg="6"
+              xl="5"
             >
                 <v-row justify="center" align="center">
                     <v-col cols="12" sm="6" lg="5">
@@ -83,7 +84,7 @@
                         </v-btn>
                         </div>
                     </v-col>
-                    <v-col cols="12" lg="3" class="order-2 order-sm-2 order-lg-0">
+                    <v-col cols="12" lg="4" xl="3" class="order-2 order-sm-2 order-lg-0">
                         <v-img 
                           class="imagenDelCapacitador"
                           :src="avatar"

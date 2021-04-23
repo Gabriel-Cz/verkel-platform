@@ -10,13 +10,16 @@
         <TheContentForNavbar></TheContentForNavbar>  
       </v-app-bar>
       <TheMobileNavbar v-show="mobileNavbar" />
+      
       <v-main
         id="contentContainer"
         class="overflow-y-auto" 
       >
 
         <v-container fluid>
-          <nuxt />
+          <transition name="verkelTransitionPages">
+            <nuxt  />
+          </transition>
         </v-container>
 
       </v-main>
@@ -48,6 +51,9 @@ export default {
       switch (this.$vuetify.breakpoint.name) {
         case 'xs': return true
         case 'sm': return true
+        case 'md': return false
+        case 'lg': return false
+        case 'xl': return false
       }
     },
     navbar() {
@@ -75,4 +81,13 @@ export default {
 .v-bottom-navigation #TheBottomNav{
   opacity: 0.1;
 }
+
+.verkelTransitionPages-enter-active, .home-leave-active {
+  transition: .5s;
+}
+
+.verkelTransitionPages-enter, .verkelTransitionPages-active {
+  opacity: 0;
+}
+
 </style>

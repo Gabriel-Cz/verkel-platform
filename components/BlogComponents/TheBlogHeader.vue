@@ -25,7 +25,7 @@
 }
 
 .colImageWrapper{
-    background-image: url('/ImageBlogHeader.svg');
+    background-image: url('/TheBlogHeaderSvg.svg');
 }
 
 .textHeader{

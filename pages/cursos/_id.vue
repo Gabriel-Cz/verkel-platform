@@ -1,7 +1,9 @@
 <template>
     <div>
-        <TheHeaderOfTheCoursePage :titulo="curso.titulo" :capacitador="curso.capacitador" :categoria="curso.categoria" :imagen="curso.imagen" :avatar="curso.avatar" :descripcionDelCurso="curso.descripcion" :descripcionDelCapacitador="descripcionDelCapacitador"></TheHeaderOfTheCoursePage>
-        <TheBuyCourseComponent :imagenDelCurso="curso.imagen" :titulo="curso.titulo"></TheBuyCourseComponent>
+        <div>
+            <TheHeaderOfTheCoursePage :titulo="curso.titulo" :capacitador="curso.capacitador" :categoria="curso.categoria" :imagen="curso.imagen" :avatar="curso.avatar" :descripcionDelCurso="curso.descripcion" :descripcionDelCapacitador="descripcionDelCapacitador"></TheHeaderOfTheCoursePage>
+            <TheBuyCourseComponent :imagenDelCurso="curso.imagen" :titulo="curso.titulo"></TheBuyCourseComponent>
+        </div>
     </div>
 </template>
 
@@ -32,7 +34,7 @@ export default {
     methods: {
         ...mapActions('courses', ['getCourse'])
     },
-    beforeMount() {
+    created() {
         this.getCourse(this.routeId)
     }
 }

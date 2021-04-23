@@ -61,7 +61,7 @@ export default {
 }
 
  .headerRow {
-    background-image: url('/TheHeaderSvg.svg');
+    background-image: url('/TheCoursesPageHeaderSvg.svg');
  }
 
 </style>

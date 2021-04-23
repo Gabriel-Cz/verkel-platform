@@ -5,6 +5,7 @@
           color="transparent"
           style="cursor: pointer;"
           rounded
+          hover
           nuxt-link :to="'blog/' + `${idDelArticulo}`"
         >
             <v-img  

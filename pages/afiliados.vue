@@ -5,7 +5,7 @@
                 <div class="text-h4 mt-5">
                   Verkel Afiliados
                 </div>
-                <div v-show="this.$vuetify.breakpoint.name === 'xs' ? false : true" class="text-body-1 mt-5 mt-lg-10 px-5 px-lg-16 mx-lg-10">
+                <div v-show="this.$vuetify.breakpoint.name === 'xs' ? false : true" class="text-body-1 mt-5 mt-lg-10 px-5 px-xl-16 mx-lg-10">
                     It is a long established fact that a reader will be distracted by the readable content of a page when l
                     ooking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as 
                     opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and 
@@ -86,9 +86,6 @@
 </clipPath>
 </defs>
 </svg>
-                </div>
-                <div class="mb-5">
-                    <v-btn @click="alert('No puedes afiliarte aun.')" color="#5e949f" rounded outlined>Afiliarse</v-btn>
                 </div>
             </v-card>
         </v-container>

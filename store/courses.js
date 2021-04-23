@@ -27,8 +27,6 @@ export const actions = {
         await axios.get('https://verkel-platform-default-rtdb.firebaseio.com/cursos.json')
         .then(res => {
             const DBcourse = res.data.find(course => course._id === id ? course : false);
-            console.log(res.data);
-            console.log(DBcourse);
             commit('setCourse', DBcourse)
         })
         .catch(e => console.log(e))

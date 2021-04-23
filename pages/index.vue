@@ -3,7 +3,7 @@
     <TheMainPageHeader2></TheMainPageHeader2>
     <TheCoursesSection></TheCoursesSection>
     <TheTeachersSection></TheTeachersSection>
-    <TheToolViewSection></TheToolViewSection>
+    <TheVerkelAffiliatesSection></TheVerkelAffiliatesSection>
     <TheEnterpriseSection></TheEnterpriseSection>
   </div>
 </template>
@@ -12,7 +12,7 @@
 import TheMainPageHeader2 from '@/components/MainPageComponents/TheMainPageHeader2';
 import TheCoursesSection from '@/components/MainPageComponents/TheCoursesSection';
 import TheTeachersSection from '@/components/MainPageComponents/TheTeachersSection';
-import TheToolViewSection from '@/components/MainPageComponents/TheToolViewSection';
+import TheVerkelAffiliatesSection from '@/components/MainPageComponents/TheVerkelAffiliatesSection';
 import TheEnterpriseSection from '@/components/MainPageComponents/TheEnterpriseSection'
 
 export default {
@@ -37,7 +37,7 @@ export default {
     TheMainPageHeader2,
     TheCoursesSection,
     TheTeachersSection,
-    TheToolViewSection,
+    TheVerkelAffiliatesSection,
     TheEnterpriseSection,
   }
 }

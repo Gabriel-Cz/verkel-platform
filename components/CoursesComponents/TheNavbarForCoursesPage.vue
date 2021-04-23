@@ -6,7 +6,7 @@
           color="transparent"
         >
             <v-row>
-                <v-col cols="0" sm="0" md="5" lg="8">
+                <v-col cols="0" sm="0" md="5" lg="7" xl="8" >
                 </v-col>
                 <v-col cols="12" sm="6" md="3" lg="2">
                     <v-text-field
