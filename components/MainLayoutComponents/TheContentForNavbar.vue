@@ -125,6 +125,11 @@ export default {
       return {
         btns: [
             {
+               key: 'cero',
+               name: 'Principal',
+               pagina: '/'
+            },
+            {
                 key: 'uno',
                 name: 'Blog',
                 pagina: '/blog'
@@ -170,18 +175,22 @@ export default {
     font-family: 'Roboto', sans-serif;
 }
 
-.menuBtns {
-    color: #42509e;
-    position: relative;
-    transition: font-size 0.2s ease-in;
+.menuBtns:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: rgb(25, 60, 175);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
 }
 
-.menuBtns:hover {
-    color: hsl(222, 87%, 33%);
-    opacity: 0.7;
-    border-bottom: none;
-    font-size: 17px;
-    text-shadow: 0px 2px 5px hsla(210, 3%, 15%, 0.562);
+.menuBtns:hover:after { 
+  width: 100%; 
+  left: 0; 
 }
 
 .imageBehindForm{

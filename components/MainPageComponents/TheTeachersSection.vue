@@ -26,17 +26,6 @@
                         todo esto mediante recursos pedagogicos y andragógicos  que lleven al usuario por un camino práctico y de inmediata aplicación.
                     </p>
                 </div>
-                 <div class="d-flex justify-center">
-                   <v-btn
-                  rounded
-                  outlined
-                  small
-                  class="py-2 mt-2"
-                  color="#5e949f"
-                >
-                    Profesionales de Verkel
-                </v-btn>
-                 </div>
             </v-col>
             <v-col
               class="d-flex justify-start ml-md-16 pl-md-3 mt-5 mt-md-0"

@@ -17,7 +17,7 @@
                     It is a long established fact that a reader will be distracted by the readable content of a page when l
                     ooking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as 
                 </div>
-                <div class="mt-n9 mt-sm-5 mt-md-10">
+                <div class="mt-n9 mt-sm-5">
                         <svg width="100%" height="378" viewBox="0 0 685 378" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="486.5" cy="117.5" r="2.5" fill="black"/>
 <circle cx="177.75" cy="141.75" r="3.75" fill="black"/>
@@ -87,8 +87,8 @@
 </defs>
 </svg>
                 </div>
-                <div>
-                    <v-btn>
+                <div class="mb-5">
+                    <v-btn @click="alert('No puedes afiliarte aun.')" color="#5e949f" rounded outlined>Afiliarse</v-btn>
                 </div>
             </v-card>
         </v-container>

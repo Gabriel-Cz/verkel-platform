@@ -126,7 +126,7 @@ export default {
 <style scoped>
 
   .mainContainerCoursesSection{
-    background-image: url('/Component12.svg');
+    background-image: url('/LinesWithSpheres.svg');
   }
   
   .v-card, #cardWrapper-cursos{
