@@ -7,7 +7,7 @@
         v-show="navbar"
         height="75"
       >
-        <TheNavbarContent></TheNavbarContent>  
+        <TheContentForNavbar></TheContentForNavbar>  
       </v-app-bar>
       <TheMobileNavbar v-show="mobileNavbar" />
       <v-main
@@ -27,27 +27,20 @@
         class="mt-16"
         color="rgba(119, 119, 119, 0.1)"
       >
-        <TheFooterContent></TheFooterContent>
+        <TheContentForFooter></TheContentForFooter>
       </v-footer>
     </v-app>
 </template>
 
 <script>
-import TheNavbarContent from '@/components/MainLayoutComponents/TheNavbarContent';
-import TheFooterContent from '@/components/MainLayoutComponents/TheFooterContent'
+import TheContentForNavbar from '@/components/MainLayoutComponents/TheContentForNavbar';
+import TheContentForFooter from '@/components/MainLayoutComponents/TheContentForFooter'
 import TheMobileNavbar from '@/components/MainLayoutComponents/TheMobileNavbar'
-import TheBottomNavigationContent from '@/components/MainLayoutComponents/TheBottomNavigationContent';
 
 export default {
-  data () {
-    return {
-      //
-    }
-  },
   components: {
-    TheNavbarContent,
-    TheFooterContent,
-    TheBottomNavigationContent,
+    TheContentForNavbar,
+    TheContentForFooter,
     TheMobileNavbar
   },
   computed: {

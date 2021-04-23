@@ -1,7 +1,9 @@
 <<template>
     <div>
       <TheBlogHeader></TheBlogHeader>
-      <TheBlogContentBody :posts="this.posts" ></TheBlogContentBody>
+      <v-container :fluid="this.$vuetify.breakpoint.name === 'xs' ? true : false">
+        <TheBlogContentBody :posts="posts" ></TheBlogContentBody>
+      </v-container>
     </div>
 </template>
 

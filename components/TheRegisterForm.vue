@@ -52,7 +52,7 @@
           class="primary" 
           small 
           dark
-          @click="createUser()"
+          @click="alert('No disponible el registro de usuarios por el momento.')"
         >
             Registrarse
         </v-btn>
@@ -68,9 +68,6 @@
 
 <script>
 
-import TheRegisterButton from "@/components/TheRegisterButton";
-import auth from 'firebase/auth';
-
 export default {
     name: "TheRegisterForm",
     data () {
@@ -84,22 +81,5 @@ export default {
             }
         }
     },
-    methods: {
-      pressed() {
-        alert("Campos Vacios, Intenta de nuevo");
-      },
-      async createUser() {
-      try {
-        await this.$fire.auth.createUserWithEmailAndPassword(
-          this.formData.email,
-          this.formData.password,
-        )
-        alert("Registro Exitoso!, En un momento estaras en tu perfil");
-        this.userProfile = true
-      } catch (e) {
-        handleError(e)
-      }
-    }
-  }
 }
 </script>

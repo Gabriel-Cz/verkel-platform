@@ -1,9 +1,9 @@
 <template>
     <div>
-        <v-container>
-            <v-card elevation="10" :width="cardWidth" color="transparent">
-                <ThePostHeader :tituloDelArticulo="this.articulo.titulo" :imagenDelArticulo="this.articulo.imagen"></ThePostHeader>
-                <ThePostContent :contenidoDelArticulo="this.articulo.contenido"></ThePostContent>
+        <v-container class="d-flex justify-center align-center mt-5 mt-lg-16">
+            <v-card elevation="0" id="postCard" :width="cardWidth" color="transparent">
+                <PostHeader :tituloDelArticulo="articulo.titulo" :imagenDelArticulo="articulo.imagen" :autorDelArticulo="articulo.autor" :avatarDelAutor="articulo.avatar" />
+                <PostContent :contenidoDelArticulo="articulo.contenido" />
             </v-card>
         </v-container>
     </div>
@@ -11,31 +11,23 @@
 
 <script>
 
-import ThePostHeader from '@/components/BlogComponents/TheBlogHeader'
-import ThePostContent from '@/components/BlogComponents/ThePostContent'
+import PostHeader from '@/components/BlogComponents/PostHeader'
+import PostContent from '@/components/BlogComponents/PostContent'
 
 import { mapActions, mapState } from 'vuex'
     export default {
         name: "",
         components: {
-            ThePostHeader,
-            ThePostContent,
+            PostHeader,
+            PostContent,
         },
         computed: {
             ...mapState('posts', {
                 articulo: state => state.currentPost
             }),
-            Id() {
+            postId() {
                 return this.$route.params.id;
-            }
-        },
-        methods: {
-            ...mapActions('posts', ['getPost'])
-        },
-        created() {
-            this.getPost(this.Id)
-        },
-        computed: {
+            },
             cardWidth() {
                 switch (this.$vuetify.breakpoint.name) {
                     case 'xs': return '100%';
@@ -44,10 +36,12 @@ import { mapActions, mapState } from 'vuex'
                     default: return '50%';
                 }
             }
-        }
+        },
+        methods: {
+            ...mapActions('posts', ['getPost'])
+        },
+        beforeMount() {
+            this.getPost(this.postId)
+        },
     }
 </script>
-
-<style scoped>
-
-</style>

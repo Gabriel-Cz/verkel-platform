@@ -47,7 +47,7 @@
         </v-row>
         <v-row>
             <v-col cols="12" class="d-flex">
-                <svg width="1345" height="143" viewBox="0 0 1345 143" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="1345" :height="this.$vuetify.breakpoint.name === 'xs' ? 75 : 143 " viewBox="0 0 1345 143" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <line y1="-1" x2="1340.98" y2="-1" transform="matrix(-0.995362 0.0961984 -0.0702176 -0.997532 1334.76 12)" stroke="#C4C4C4" stroke-width="2"/>
                   <circle cx="1330.25" cy="14.25" r="8.75" transform="rotate(180 1330.25 14.25)" fill="#C4C4C4"/>
                 </svg>

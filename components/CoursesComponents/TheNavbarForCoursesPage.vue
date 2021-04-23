@@ -63,6 +63,4 @@ export default {
       text-transform: capitalize;
   }
 
-  
-
 </style>

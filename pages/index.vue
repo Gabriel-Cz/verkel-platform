@@ -14,7 +14,6 @@ import TheCoursesSection from '@/components/MainPageComponents/TheCoursesSection
 import TheTeachersSection from '@/components/MainPageComponents/TheTeachersSection';
 import TheToolViewSection from '@/components/MainPageComponents/TheToolViewSection';
 import TheEnterpriseSection from '@/components/MainPageComponents/TheEnterpriseSection'
-import TheEsloganSection from '@/components/MainPageComponents/TheEsloganSection';
 
 export default {
   head () {
@@ -40,7 +39,6 @@ export default {
     TheTeachersSection,
     TheToolViewSection,
     TheEnterpriseSection,
-    TheEsloganSection,
   }
 }
 </script>

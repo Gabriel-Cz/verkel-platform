@@ -1,8 +1,8 @@
 <<template>
     <div>
-        <v-row justify="center" align="center" style="background-image: url('/ImageBlogHeader.svg'); height: 500px;" class="mt-8">
+        <v-row id="row" justify="center" align="center" style="background-image: url('/ImageBlogHeader.svg'); " class="mt-4 mt-md-8">
             <v-col cols="12" sm="10" md="6" lg="5">
-                <div class="text-center textHeader text-h5 text-xl-h4 pa-lg-4 text-primary">Mantente al dia en los temas mas relevantes de Capital Humano.</div>
+                <div class="text-center textHeader text-h5 text-xl-h4 pa-lg-4 text-primary font-weight-light">Mantente al dia en los temas mas relevantes de Capital Humano.</div>
             </v-col>
         </v-row>
         <v-divider></v-divider>
@@ -12,15 +12,17 @@
 <script>
     export default {
         name: "TheBlogHeader",
-        data () {
-            return {
-                // 
-            }
-        }
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+#row {
+    @media screen and (max-width: 800px) {
+        height: 250px;
+    }
+    height: 500px;
+}
 
 .colImageWrapper{
     background-image: url('/ImageBlogHeader.svg');

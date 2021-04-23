@@ -1,9 +1,8 @@
 <template>
-        <v-container fluid class="footerContainer" style="font-family: 'Raleway';">
-            <v-row>
-                <v-col cols="12" md="3" sm="3" lg="4">
-                    <div class="d-flex justify-center align-center">
-                        <p>Redes:</p>
+        <v-container fluid class="footerContainer">
+            <v-row justify="center" align="center">
+                <v-col cols="12" md="3" sm="3" lg="4" class="d-flex justify-center">
+                    <div>
                         <v-icon 
                           v-for="icon in footerIcons"
                           :key="icon"
@@ -14,16 +13,19 @@
                     </div>
                 </v-col>
                 <v-col cols="12" md="4" sm="4" lg="4"> 
-                    <div class="borders informationBorders">
+                    <div class="borders text-subtitle-2 informationBorders">
                         <p class="pt-2 pl-4">Contactanos: {{ information.email }}</p>
                         <p class="mt-1 pl-4">Telefono: + {{ information.telNumber }}</p>
                     </div>
                 </v-col>
                 <v-col cols="12" md="5" sm="5" lg="4">
-                    <div class="borders descriptionBorders">
-                        <p class="pl-4 pt-2">Sobre Verkel: </p>
-                         <p class="pl-4">{{ information.verkelDescription }}</p>
+                    <div class="borders descriptionBorders text-subtitle-2">
+                        <p class="pt-2 ">Sobre Verkel: </p>
+                         <b class="">{{ information.verkelDescription }}</b>
                     </div>
+                </v-col>
+                <v-col class="d-flex justify-center align-center py-2">
+                    <small>Verkel - 2020</small>
                 </v-col>
            </v-row>
         </v-container>

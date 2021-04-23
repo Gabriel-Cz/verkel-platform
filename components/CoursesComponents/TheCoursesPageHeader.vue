@@ -19,7 +19,7 @@
 
 <script>
 export default {
-    name: "TheCoursesContainer",
+    name: "TheCoursesPageHeader",
     data () {
         return {
             recursosHumanos: {

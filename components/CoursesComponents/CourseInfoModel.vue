@@ -9,15 +9,10 @@
 
 <script>
 export default {
-    name: "TheCourseInfoModel",
-    data () {
-        return {
-            //
-        }
-    },
+    name: "CourseInfoModel",
     props: {
-        divInfoTitle: "",
-        divInfoDescripcion: "",
+        divInfoTitle: String,
+        divInfoDescripcion: String
     }
 }
 </script>

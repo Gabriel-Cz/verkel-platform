@@ -16,12 +16,8 @@
     export default {
         head() {
             return {
-                title: "Plataforma Verkel | About"
+                title: "Plataforma Verkel | Acerca De"
             }
         }
     }
 </script>
-
-<style lang="scss" scoped>
-
-</style>

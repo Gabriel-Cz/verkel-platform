@@ -27,7 +27,7 @@
                     <v-img :src="avatarDelCapacitador" >
                     </v-img>
                 </v-avatar>
-                <p class="ma-5 mb-0 mt-0 subtitle italic" style="font-style: italic;">Impartido por {{ capacitadorDelCurso }}</p>
+                <p class="ma-5 mb-0 mt-0 subtitle font-italic">Impartido por <b>{{ capacitadorDelCurso }}</b></p>
             </v-card-actions>
         </v-card>
       </v-hover>
@@ -37,7 +37,7 @@
 <script>
 
 export default {
-    name: "TheCourseCardModel",
+    name: "CourseCardModel",
     props: {
       idDelCurso: String,
       imagenDelCurso: String,

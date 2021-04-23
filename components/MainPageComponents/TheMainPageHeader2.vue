@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div >
         <div class="custom-shape-divider-top-1601490863">
           <svg :height="svgHeight" :width="svgWidth" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
@@ -10,7 +10,7 @@
             <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shapeWhite"></path>
           </svg> 
         </div>
-        <v-row class="d-flex justify-center mt-lg-5 mt-xl-16 pb-16"> 
+        <v-row class="d-flex justify-center mt-n9 mt-sm-0 mt-lg-0 mt-xl-16 pb-16"> 
             <v-col v-show="notShowDecorativeCol" cols="1" sm="0" md="1" lg="2"></v-col>
             <v-col cols="11" sm="10" md="10" lg="8" class="d-flex justify-center">
                 <div class="text-center divOverlay">
@@ -24,7 +24,7 @@
                        Lorem Ipsum Dolor asitem asimet lorem.
                     </p>
                     <v-btn class="mt-5 mb-7 mt-md-10 mb-md-14" 
-                      :small="$vuetify.breakpoint.name === 'xs' ? true : false" 
+                      :x-small="$vuetify.breakpoint.name === 'xs' ? true : false" 
                       dark 
                       color="light-blue accent-4"
                       nuxt-link to="/about"
@@ -58,6 +58,7 @@ export default {
                 case 'md': return true
                 case 'lg': return true
                 case 'xl': return true
+                default: false;
             }
         },
         notShowSmPlus() {
@@ -67,6 +68,7 @@ export default {
                 case 'md': return false
                 case 'lg': return false
                 case 'xl': return false
+                default: false;
             }
         },
         notShowDecorativeCol() {
@@ -76,6 +78,7 @@ export default {
                 case 'md': return false
                 case 'lg': return true
                 case 'xl': return true
+                default: false;
             }
         },
         imageHeight() {
@@ -95,13 +98,24 @@ export default {
                 case 'md': return "200"
                 case 'lg': return "200"
                 case 'xl': return "200"
+                default: false;
             }
         },
+    },
+    beforeMount() {
+        this.notShowInMobile,
+        this.notShowSmPlus,
+        this.notShowDecorativeCol,
+        this.imageHeight,
+        this.svgHeight
     }
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+$divOverlayBg: linear-gradient(180deg, #537CE3 0%, rgba(114, 138, 202, 0.858843) 29.69%, rgba(83, 124, 227, 0.536458) 97.49%, rgba(83, 124, 227, 0) 100%);
+$divOverlayMobileBg: linear-gradient(180deg, #537CE3 0%, #728ACA 29.69%, rgba(87, 125, 225, 0.8) 90.1%, rgba(83, 124, 227, 0.536458) 97.49%);
 
 .custom-shape-divider-top-1601490863 {
     position: absolute;
@@ -147,12 +161,15 @@ export default {
 }
 
 .divOverlay{
+    @media screen and (max-width: 600px) {
+        background: $divOverlayMobileBg;
+    }
     position: relative;
     overflow: hidden;
     z-index: 1;
     margin-bottom: -280px;
     margin-top: 64px;
-    background: linear-gradient(180deg, #537CE3 0%, rgba(114, 138, 202, 0.858843) 29.69%, rgba(83, 124, 227, 0.536458) 97.49%, rgba(83, 124, 227, 0) 100%);
+    background: $divOverlayBg;
     border-radius: 5px;
     backdrop-filter: blur(1px);
 }

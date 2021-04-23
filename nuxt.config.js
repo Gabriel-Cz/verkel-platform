@@ -16,14 +16,6 @@ export default {
         type: 'image/x-icon', 
         href: '/favicon.ico' 
       },
-      { 
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Kameron&display=swap',
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Volkhov&display=swap',
-      },
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Lora&display=swap',

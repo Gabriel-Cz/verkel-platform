@@ -17,8 +17,8 @@
             >
                 <v-row justify="center" align="center">
                     <v-col cols="12" sm="6" lg="5">
-                        <div class="">
-                          <p class="px-10 px-md-0 text-center text-sm-left mt-xl-10">
+                        <div class="divCourseInfo">
+                          <p class="px-10 px-md-0 text-center mx-4 text-sm-left">
                             {{ descripcionDelCurso }}
                           </p>
                         </div>
@@ -138,6 +138,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.divCourseInfo {
+   border-left: 1px ridge #E0E0E0;
+}
 
 .thePresentationRow{
     background-image: url("/ImagenBGCursoPresentacion.svg");

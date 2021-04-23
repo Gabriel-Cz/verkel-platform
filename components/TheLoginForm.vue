@@ -31,15 +31,13 @@
         </v-form>
         <v-divider></v-divider>
         <v-card-actions class="d-flex justify-center">
-            <v-btn color="primary" class="mt-8" type="submit" small @click="createUser()">Iniciar Sesion</v-btn>
-            <v-btn color="error" class="ml-4 mt-8" small outlined @click="modal = !modal">Cancelar</v-btn>
+            <v-btn color="primary" class="mt-8" type="submit" small @click="alert('No disponible el inicio de sesion por el momento.')">Iniciar Sesion</v-btn>
+            <v-btn color="error" class="ml-4 mt-8" small outlined @click="modal = false">Cancelar</v-btn>
         </v-card-actions>
     </div>
 </template>
 
 <script>
-
-import auth from 'firebase/auth';
 
 export default {
     name: "TheLoginForm",
@@ -50,29 +48,12 @@ export default {
                 email: "",
                 password: "",
             },
-            userProfile: false,
             props: {
               modal: false,
             }
         }
     },
-    methods: {
-    async createUser() {
-      try {
-        await this.$fire.auth.signInWithEmailAndPassword(
-          this.formData.email,
-          this.formData.password,
-        ).then(data => {
-          alert('Iniciando Sesion')
-          this.$router.push('/user/usuario1')
-        })
-      } catch(error) {
-        this.error = error
-      }
-    }
-  }
 }
-
 
 </script>
 

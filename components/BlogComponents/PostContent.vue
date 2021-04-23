@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="p-5">
+        <div class="pa-5 pa-lg-10 body-1 cardBody">
             {{ contenidoDelArticulo }}
         </div>
     </div>
@@ -8,13 +8,17 @@
 
 <script>
     export default {
-        name : "ThePostContent",
+        name : "PostContent",
         props: {
             contenidoDelArticulo: String
         }
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+.cardBody {
+    border-bottom: 1px solid #BDBDBD;
+}
 
 </style>

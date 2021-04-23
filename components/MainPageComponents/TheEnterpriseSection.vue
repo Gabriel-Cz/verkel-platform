@@ -8,7 +8,7 @@
           </div>
         </v-col>
         <v-col cols="12" sm="8" md="5" class="d-flex justify-center">
-          <p class="descripcionEmpresas text-center text-subtitle-1 text-md-subtitle-2">
+          <p class="descripcionEmpresas text-center text-subtitle-1 text-md-subtitle-1">
             Verkel diseña el plan concorde a las necesidades y requerimientos de tu empresa. Consulta el plan que podemos diseñar para ti
             sin ningun costo de por medio.
           </p>
@@ -21,7 +21,7 @@
             rounded
             small
             color="#FFA726"
-            nuxt-link to="/about"
+            nuxt-link to="/empresas"
           >
             Consultar Planes
           </v-btn>

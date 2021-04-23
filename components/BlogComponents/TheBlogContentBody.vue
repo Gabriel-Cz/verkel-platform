@@ -4,9 +4,10 @@
           <v-col 
             v-for="articulo in articulosDestacados"
             :key="articulo._id"
-            cols="8"
+            cols="12" sm="7"
+            class="px-md-16"
           >
-              <ThePostCardModel
+              <PostCardModel
                 :idDelArticulo="articulo._id"
                 :tituloDelArticulo="articulo.titulo"
                 :descripcionDelArticulo="articulo.descripcion"
@@ -14,7 +15,7 @@
                 :imagenDelArticulo="articulo.imagen"
                 :avatarDelAutor="articulo.avatar"
               >
-              </ThePostCardModel> 
+              </PostCardModel> 
         </v-col>
 
       </v-row>
@@ -23,24 +24,24 @@
 
 <script>
 
-import ThePostCardModel from '@/components/BlogComponents/ThePostCardModel';
+import PostCardModel from '@/components/BlogComponents/PostCardModel';
 import { mapActions, mapState } from 'vuex';
 
 export default {
     name: "TheBlogContentBody",
     components: {
-        ThePostCardModel,
+        PostCardModel,
     },
     computed: {
       ...mapState('posts', {
-        articulosDestacados: state => state.topPosts
+        articulosDestacados: state => state.posts
       })
     },
     methods: {
-      ...mapActions('posts', ['getTopPosts'])
+      ...mapActions('posts', ['getPosts'])
     },
     created() {
-      this.getTopPosts()
+      this.getPosts()
     }
 }
 </script>

@@ -2,7 +2,7 @@
     <div>
         <v-card
           hover
-          nuxt-link :to="`/profesiones/${idDeLaProfesion}`"
+          nuxt-link :to="'/profesiones/' + `${idDeLaProfesion}`"
           color="transparent" 
           style="font-family: Latee;">
             <v-card-title 
@@ -16,7 +16,7 @@
 
 <script>
 export default {
-    name: "TheProfesionCardModel",
+    name: "ProfesionCardModel",
     props: {
         idDeLaProfesion: String,
         imagenDeLaProfesion: String,

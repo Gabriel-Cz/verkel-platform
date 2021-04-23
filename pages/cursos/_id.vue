@@ -7,9 +7,8 @@
 
 <script>
 
-import TheHeaderOfTheCoursePage from '@/components/IndividualCoursePageComponents/TheHeaderOfTheCoursePage';
-import TheBuyCourseComponent from '@/components/IndividualCoursePageComponents/TheBuyCourseComponent';
-import TheCoursePreview from '@/components/IndividualCoursePageComponents/TheCoursePreview';
+import TheHeaderOfTheCoursePage from '@/components/SingleCoursePageComponents/TheHeaderOfTheCoursePage';
+import TheBuyCourseComponent from '@/components/SingleCoursePageComponents/TheBuyCourseComponent';
 import { mapActions, mapState } from 'vuex';
 
 export default {
@@ -21,11 +20,10 @@ export default {
     components: {
         TheHeaderOfTheCoursePage,
         TheBuyCourseComponent,
-        TheCoursePreview
     },
     computed: {
         ...mapState('courses', {
-            curso: state => state.course
+            curso: state => state.currentCourse
         }),
         routeId() {
             return this.$route.params.id
@@ -34,7 +32,7 @@ export default {
     methods: {
         ...mapActions('courses', ['getCourse'])
     },
-    created() {
+    beforeMount() {
         this.getCourse(this.routeId)
     }
 }

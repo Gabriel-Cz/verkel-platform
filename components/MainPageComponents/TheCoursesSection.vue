@@ -14,7 +14,7 @@
                     v-for="curso in cursosDestacados"
                     :key="curso.name"
                   >  
-                    <TheCourseCardModel 
+                    <CourseCardModel 
                       :idDelCurso="curso._id"
                       :imagenDelCurso="curso.imagen"
                       :nombreDelCurso="curso.titulo"
@@ -22,7 +22,7 @@
                       :capacitadorDelCurso="curso.capacitador"
                       :avatarDelCapacitador="curso.avatar"
                     >
-                    </TheCourseCardModel>
+                    </CourseCardModel>
                   </v-col>
                 </v-row>
                 </v-card-text>
@@ -41,7 +41,7 @@
                     v-for="articulo in articulosDestacados"
                     :key="articulo._id"
                   >
-                      <ThePostCardModel
+                      <PostCardModel
                         :idDelArticulo="articulo._id"
                         :tituloDelArticulo="articulo.titulo"
                         :autorDelArticulo="articulo.autor"
@@ -49,7 +49,7 @@
                         :imagenDelArticulo="articulo.imagen"
                         :descripcionDelArticulo="articulo.descripcion"
                       >
-                      </ThePostCardModel>
+                      </PostCardModel>
                   </v-col>
                 </v-row>
                 </v-card-text>
@@ -68,14 +68,14 @@
                   v-for="profesion in profesionesDestacadas"
                   :key="profesion.titulo"
                 >
-                    <TheProfesionCardModel
+                    <ProfesionCardModel
                       class="pt-2"
                       :imagenDeLaProfesion="profesion.imagen" 
                       :nombreDeLaProfesion="profesion.titulo" 
                       :categoriaDeLaProfesion="profesion.categoria"
                       :avatarDeLaProfesion="profesion.avatar"
                     >
-                    </TheProfesionCardModel>
+                    </ProfesionCardModel>
                 </v-col>
               </v-row>
               </v-card-text>
@@ -87,20 +87,20 @@
 
 <script>
 
-import TheCourseCardModel from '@/components/TheCourseCardModel';
-import ThePostCardModel from '@/components/BlogComponents/ThePostCardModel';
-import TheProfesionCardModel from '@/components/TheProfesionCardModel';
+import CourseCardModel from '@/components/CoursesComponents/CourseCardModel';
+import PostCardModel from '@/components/BlogComponents/PostCardModel';
+import ProfesionCardModel from '@/components/ProfesionsComponents/ProfesionCardModel';
 import { mapState, mapActions } from 'vuex';
 
 export default {
     name: "TheCoursesSection",
     components: {
-      TheCourseCardModel,
-      ThePostCardModel,
-      TheProfesionCardModel,
+      CourseCardModel,
+      PostCardModel,
+      ProfesionCardModel,
     },
     created() {
-      this.getTopPosts(),
+      this.getPosts(),
       this.getProfesions(),
       this.getCourses()
     },
@@ -109,7 +109,7 @@ export default {
         profesionesDestacadas: state => state.profesions
       }),
       ...mapState('posts', {
-        articulosDestacados: state => state.topPosts
+        articulosDestacados: state => state.posts
       }),
       ...mapState('courses', {
         cursosDestacados: state => state.courses
@@ -117,7 +117,7 @@ export default {
     },
     methods: {
       ...mapActions('profesions', ['getProfesions']),
-      ...mapActions('posts', ['getTopPosts']),
+      ...mapActions('posts', ['getPosts']),
       ...mapActions('courses', ['getCourses'])
     },
 }

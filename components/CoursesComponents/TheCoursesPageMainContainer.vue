@@ -12,10 +12,10 @@
                   md="8"
                   lg="6"
                 >
-                    <TheCourseInfoModel 
+                    <CourseInfoModel 
                       :divInfoTitle="divProfesiones.titulo" 
                       :divInfoDescripcion="divProfesiones.descripcion">
-                    </TheCourseInfoModel>
+                    </CourseInfoModel>
                 </v-col>
 
                 <v-col
@@ -28,13 +28,13 @@
                   :key="profesion.name"
 
                 >
-                    <TheProfesionCardModel
+                    <ProfesionCardModel
                       :imagenDeLaProfesion="profesion.imagen"
                       :nombreDeLaProfesion="profesion.titulo"
                       :categoriaDeLaProfesion="profesion.categoria"
                       :avatarDeLaCategoria="profesion.avatar"
                     >
-                    </TheProfesionCardModel>
+                    </ProfesionCardModel>
                 </v-col>
                 <v-col cols="12" class="d-flex align-center justify-center mt-10">
                     <v-btn 
@@ -58,10 +58,10 @@
                   md="8"
                   lg="6"
                 >
-                    <TheCourseInfoModel
+                    <CourseInfoModel
                       :divInfoTitle="divCursos.titulo"
                       :divInfoDescripcion="divCursos.descripcion"
-                    ></TheCourseInfoModel>
+                    ></CourseInfoModel>
                 </v-col>
                 <v-col 
                   cols="12"
@@ -72,13 +72,14 @@
                   v-for="curso in cursos"
                   :key="curso.titulo"
                 >
-                    <TheCourseCardModel
+                    <CourseCardModel
+                      :idDelCurso="curso._id"
                       :imagenDelCurso="curso.imagen"
                       :nombreDelCurso="curso.titulo"
                       :capacitadorDelCurso="curso.capacitador"
                       :avatarDelCapacitador="curso.avatar"
                       :descripcionDelCurso="curso.descripcion"
-                    ></TheCourseCardModel>
+                    ></CourseCardModel>
                 </v-col>
                 <v-col cols="12" class="d-flex align-center justify-center mt-10">
                     <v-btn 
@@ -103,11 +104,11 @@
                   lg="6"
                   align-self="start"
                 >
-                    <TheCourseInfoModel
+                    <CourseInfoModel
                       :divInfoTitle="divEspecializaciones.titulo"
                       :divInfoDescripcion="divEspecializaciones.descripcion"
                     >
-                    </TheCourseInfoModel>
+                    </CourseInfoModel>
                 </v-col>
                 <v-col
                   class="mt-8"
@@ -118,12 +119,12 @@
                   v-for="especializacion in especializaciones"
                   :key="especializacion.titulo"
                 >
-                    <TheEspecializationCardModel
+                    <EspecializationCardModel
                       :imagenDeLaEspecializacion="especializacion.imagen"
                       :nombreDeLaEspecializacion="especializacion.titulo"
                       :institucionQueImpartira="especializacion.institucion"
                     >
-                    </TheEspecializationCardModel>
+                    </EspecializationCardModel>
                 </v-col>
                 <v-col cols="12" class="d-flex align-start justify-center mt-10">
                     <v-btn
@@ -141,18 +142,19 @@
 
 <script>
 
-import TheCourseInfoModel from '@/components/TheCourseInfoModel';
-import TheProfesionCardModel from '@/components/TheProfesionCardModel';
-import TheCourseCardModel from '@/components/TheCourseCardModel';
-import TheEspecializationCardModel from '@/components/TheEspecializationCardModel';
+import CourseInfoModel from '@/components/CoursesComponents/CourseInfoModel';
+import CourseCardModel from '@/components/CoursesComponents/CourseCardModel';
+import ProfesionCardModel from '@/components/ProfesionsComponents/ProfesionCardModel';
+import EspecializationCardModel from '@/components/EspecializationsComponents/EspecializationCardModel';
 import { mapState, mapActions } from 'vuex';
 
 export default {
     name: "TheCoursesPageMainContainer",
     components: {
-      TheCourseInfoModel,
-      TheProfesionCardModel,
-      TheEspecializationCardModel,
+      CourseInfoModel,
+      CourseCardModel,
+      ProfesionCardModel,
+      EspecializationCardModel,
     },
     data () {
         return {

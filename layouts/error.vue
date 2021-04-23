@@ -1,16 +1,18 @@
 <template>
   <v-app dark>
-    <h1 v-if="error.statusCode === 404">
-      {{ pageNotFound }}
-    </h1>
-    <h1 v-else>
-      {{ otherError }}
-    </h1>
     <v-container class="mx-auto">
-      <NuxtLink to="/">
-        Principla
-        <v-img src="/Logos/verkel-logo.svg"></v-img>
-      </NuxtLink>
+      <h1 v-if="error.statusCode === 404">
+        {{ pageNotFound }}
+      </h1>
+      <h1 v-else>
+        {{ otherError }}
+      </h1>
+      <div class="flex flex-column justify-center align-center pa-10">
+        <NuxtLink to="/">
+          Principal
+          <v-img src="/Logos/verkel-logo.svg" width="60"></v-img>
+        </NuxtLink>
+      </div>
     </v-container>
   </v-app>
 </template>

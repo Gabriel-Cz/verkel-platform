@@ -14,6 +14,7 @@
                         </v-col>
                         <v-col cols="11" md="6"
                           class="mt-10 ml-lg-0 pb-md-16 text-center text-md-left"
+                          style="font-family: Latee;"
                         >
                             <p class="afiliadosDescription text-caption text-md-subtitle-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. 
                                 Ut enim ad minim veniam, 
@@ -41,8 +42,9 @@
                             <div class="d-flex justify-center">
                                 <v-btn 
                               rounded
-                              small
+                              :small="this.$vuetify.breakpoint.name === 'xs' ? true : false" 
                               outlined
+                              router-link to="/afiliados"
                               color="#5e949f"
                               class="d-flex justify-self-center mt-7 mb-5 mb-sm-0"
                             >

@@ -19,7 +19,7 @@
 
 <script>
     export default {
-    name: "TheCourseCardModel",
+    name: "EspecializationCardModel",
     props: {
         imagenDeLaEspecializacion: String,
         nombreDeLaEspecializacion: String,
