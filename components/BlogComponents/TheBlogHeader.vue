@@ -1,6 +1,6 @@
 <<template>
     <div>
-        <v-row id="row" justify="center" align="center" style="background-image: url('/ImageBlogHeader.svg'); " class="mt-4 mt-md-8">
+        <v-row id="row" justify="center" align="center" style="background-image: url('/BlogHeaderBgImageSpheres.svg'); " class="mt-4 mt-md-8">
             <v-col cols="12" sm="10" md="6" lg="5">
                 <div class="text-center textHeader text-h5 text-xl-h4 pa-lg-4 text-primary font-weight-light">Mantente al dia en los temas mas relevantes de Capital Humano.</div>
             </v-col>
@@ -25,7 +25,7 @@
 }
 
 .colImageWrapper{
-    background-image: url('/TheBlogHeaderSvg.svg');
+    background-image: url('/BlogHeaderBgImageSpheres.svg');
 }
 
 .textHeader{

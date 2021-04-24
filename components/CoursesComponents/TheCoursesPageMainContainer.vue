@@ -36,21 +36,11 @@
                     >
                     </ProfesionCardModel>
                 </v-col>
-                <v-col cols="12" class="d-flex align-center justify-center mt-10">
-                    <v-btn 
-                      dark
-                      rounded
-                      color="#039BE5"
-                      class="mb-4"
-                    >
-                        Ver Profesiones
-                    </v-btn>
-                </v-col>
             </v-row>
             <div style="height: 100px;"></div>
             <v-row
               id="rowCursos"
-              class="d-flex justify-center mt-16"
+              class="d-flex justify-center mt-16 pb-5 pb-md-10"
             >
                 <div class="cursosOverflowDiv"></div>
                 <v-col
@@ -81,21 +71,11 @@
                       :descripcionDelCurso="curso.descripcion"
                     ></CourseCardModel>
                 </v-col>
-                <v-col cols="12" class="d-flex align-center justify-center mt-10">
-                    <v-btn 
-                      class="mb-4"
-                      rounded
-                      color="#757575"
-                      dark
-                    >
-                        Ver Cursos
-                    </v-btn>
-                </v-col>
             </v-row>
             <div style="height: 100px;"></div>
             <v-row
               id="rowEspecializaciones"
-              class="d-flex justify-center mt-16"
+              class="d-flex justify-center mt-16 pb-5 pb-md-10"
             >
                 <div class="especializacionesOverflowDiv"></div>
                 <v-col
@@ -125,16 +105,6 @@
                       :institucionQueImpartira="especializacion.institucion"
                     >
                     </EspecializationCardModel>
-                </v-col>
-                <v-col cols="12" class="d-flex align-start justify-center mt-10">
-                    <v-btn
-                      class="mb-4" 
-                      rounded                      
-                      color="#7CB342"
-                      dark
-                    >
-                        Ver Especializaciones
-                    </v-btn>
                 </v-col>
             </v-row>
     </div>

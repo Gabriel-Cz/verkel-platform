@@ -64,8 +64,8 @@ export default {
         case 'lg': return true
         case 'xl': return true
       }
-    }
-  }
+    },
+  },
 }
 </script>
 

@@ -5,7 +5,7 @@
                     <div>
                         <v-icon 
                           v-for="icon in footerIcons"
-                          :key="icon"
+                          :key="icon.name"
                           class="ma-6 mt-2"
                         >
                                 {{ icon.name }}
@@ -34,7 +34,7 @@
 
 <script>
 export default {
-    name: "TheFooterContent",
+    name: "TheContentForFooter",
     data () {
         return {
 

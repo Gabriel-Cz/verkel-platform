@@ -59,7 +59,7 @@ export default {
       },
     // ...
     services: {
-      auth: true,
+      auth: false,
       firestore: true,
       storage: true,
       firestore: {

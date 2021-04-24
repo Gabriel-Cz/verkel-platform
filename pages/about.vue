@@ -4,7 +4,7 @@
             <v-card :width="cardWidth" outlined class="my-16 pa-8 d-flex justify-center flex-column" color="transparent" elevation="20">
                 <div class="d-flex justify-center text-center">
                     <p class="text-body-1 text-center">
-                        Verkel es un prototipo desarollado con fines de introduccion a la cual seria cual seria en un futuro una plataforma de <strong>Capacitacion</strong> enfocada en <strong>Capital Humano</strong>.
+                        Verkel es un prototipo desarollado con fines de introduccion para la cual en algun futuro, seria una plataforma de <strong>Capacitacion</strong> enfocada en <strong>Capital Humano</strong>.
                     </p>
                 </div>
                 <div class="mt-10">

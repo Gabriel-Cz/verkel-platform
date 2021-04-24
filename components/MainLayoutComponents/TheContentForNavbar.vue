@@ -25,6 +25,7 @@
                   elevation="0"
                   text
                   tile
+                  nuxt-link :to="btn.pagina"
                 > 
                   <nuxt-link :to="btn.pagina" style="text-decoration: none;">
                     {{ btn.name }}
