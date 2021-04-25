@@ -73,7 +73,7 @@ export default {
         }
       },
       auth: {
-        ssr: true
+        ssr: false
       }
       // ...
     }
