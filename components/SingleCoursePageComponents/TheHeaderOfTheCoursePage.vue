@@ -19,7 +19,7 @@
                 <v-row justify="center" align="center">
                     <v-col cols="12" sm="6" lg="5">
                         <div class="divCourseInfo">
-                          <p class="px-10 px-md-0 text-center mx-4 text-sm-left">
+                          <p class="px-5 mt-5 px-md-0 text-center mx-4 text-sm-left">
                             {{ descripcionDelCurso }}
                           </p>
                         </div>
@@ -72,6 +72,17 @@
                         <p class="mt-5 mt-lg-10 pr-lg-10 text-center text-md-left">
                             {{ descripcionDelCapacitador }}
                         </p>
+                        <v-alert
+                            dismissible
+                            :value="alertProfiles"
+                            color="#FFB74D"
+                            dark
+                            transition="scale-transition"
+                            style="font-family: Roboto;"
+                            class="text-center text-subtitle-2 text-lg-caption"
+                          >
+                              Perfiles no disponibles por el momento
+                          </v-alert>
                         <div class="d-flex justify-center justify-lg-start ">
                           <v-btn
                           rounded
@@ -79,6 +90,7 @@
                           :small="btnHeightMobile ? true : false"
                           color="#5e949f"
                           class="mt-sm-2"
+                          @click="alertProfiles = !alertProfiles"
                         >
                             Ver Perfil del Capacitador
                         </v-btn>
@@ -108,6 +120,11 @@ export default {
       categoria: String,
       descripcionDelCurso: String,
       descripcionDelCapacitador: String,
+    },
+    data() {
+      return {
+        alertProfiles: false,
+      }
     },
     computed: {
       imageHeight() {

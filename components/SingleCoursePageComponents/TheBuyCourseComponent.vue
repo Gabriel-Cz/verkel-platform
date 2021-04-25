@@ -17,12 +17,24 @@
                       class="img"
                       :src="imagenDelCurso"
                       :height="imageHeight"
-                    >                       
+                    >
+                    <v-alert
+                      dismissible
+                      :value="alertProfiles"
+                      color="#FFB74D"
+                      dark
+                      transition="scale-transition"
+                      style="font-family: Roboto;"
+                      class="text-center text-subtitle-2 text-lg-caption"
+                    >
+                        LA adquisicion de cursos no esta habilitada por el momento.
+                    </v-alert>           
                     </v-img>
                     <v-card-actions class="d-flex justify-end">
                     <v-btn  
+                      @click="alertBuyCourse = !alertBuyCourse"
                       class="pa-4 buyBtn ml-n9 ml-md-n16 mt-n7 mt-md-n9"
-                      color="#FFEA00"
+                      color="#FFCA28"
                       dark
                       large
                     >   Comprar Ahora
@@ -105,6 +117,11 @@ export default {
     props: {
       imagenDelCurso: String
     },
+    data() {
+      return {
+        alertBuyCourse: false
+      }
+    },
     computed: {
       cardHeight() {
         switch(this.$vuetify.breakpoint.name) {
@@ -139,7 +156,7 @@ export default {
   margin-left: -10px;
   margin-right: -10px;
   margin-bottom: -50px;
-  background: #FDD835;
+  background: #FFEE58;
   position: relative;
   z-index: 1;
   top: 20px;
