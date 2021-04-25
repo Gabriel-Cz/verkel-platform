@@ -21,6 +21,7 @@
     "firebase": "^8.4.2",
     "firebase-admin": "^9.6.0",
     "nuxt": "^2.15.4",
+    "rimraf": "^3.0.2",
     "vuex": "^3.6.2"
   },
   "devDependencies": {
