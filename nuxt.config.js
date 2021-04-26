@@ -111,11 +111,6 @@ export default {
           fourthbackground: "#EAEAEA",
           warning: '#F35D5D'
         },
-        breakpoint: {
-          thresholds: {
-            lg: 1320,
-          }
-        }
       }
     }
   },
