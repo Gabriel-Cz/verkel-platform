@@ -11,11 +11,6 @@ export default {
       { hid: 'description', name: 'description', content: 'Plataforma de Capacitacion numero uno de Mexico' }
     ],
     link: [
-      { 
-        rel: 'icon', 
-        type: 'image/x-icon', 
-        href: '/favicon.ico' 
-      },
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Lora&display=swap',
