@@ -11,6 +11,11 @@ export default {
       { hid: 'description', name: 'description', content: 'Plataforma de Capacitacion numero uno de Mexico' }
     ],
     link: [
+      { 
+        rel: 'icon', 
+        type: 'image/x-icon', 
+        href: '/favicon.ico' 
+      },
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Lora&display=swap',
@@ -32,11 +37,16 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    '@nuxtjs/pwa',
+    '@nuxtjs/firebase',
+    '@nuxtjs/axios',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-     
+    '@nuxtjs/pwa',
+    '@nuxtjs/firebase',
+    '@nuxtjs/axios',
   ],
 
   firebase: {
@@ -79,7 +89,6 @@ export default {
   },
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {
-    optionsPath: './vuetify.options.js',
     customVariables: ['~/assets/variables.scss'],
     theme: {
       options: {
